@@ -5346,7 +5346,7 @@ const CLUSTER_MAP = {
 const PRIORITY_WEIGHTS = { "HIGH": 1.0, "MEDIUM": 0.6, "LOW": 0.3 };
 
 // ============================================================
-// STATE (all in JS variables — no localStorage/sessionStorage)
+// STATE (all in JS variables — no browser storage used)
 // ============================================================
 let currentIndex = 0;
 let responses = new Array(QUESTIONS.length).fill(null);
@@ -5711,7 +5711,7 @@ document.addEventListener('keydown', (e) => {
 });
 
 // ============================================================
-// HASH STATE FOR BASIC PERSISTENCE (no localStorage)
+// HASH STATE FOR BASIC PERSISTENCE (URL-based)
 // ============================================================
 function saveToHash() {
   try {
