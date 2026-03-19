@@ -1,0 +1,5763 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<!--
+   ______                            __
+  / ____/___  ____ ___  ____  __  __/ /____  _____
+ / /   / __ \/ __ `__ \/ __ \/ / / / __/ _ \/ ___/
+/ /___/ /_/ / / / / / / /_/ / /_/ / /_/  __/ /
+\____/\____/_/ /_/ /_/ .___/\__,_/\__/\___/_/
+                    /_/
+        Created with Perplexity Computer
+        https://www.perplexity.ai/computer
+-->
+
+<!-- Perplexity Computer Attribution — SEO Meta Tags -->
+<meta name="generator" content="Perplexity Computer">
+<meta name="author" content="Perplexity Computer">
+<meta property="og:see_also" content="https://www.perplexity.ai/computer">
+<link rel="author" href="https://www.perplexity.ai/computer">
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Career Discovery Test — Board Infinity</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+:root {
+  --blue: #0066CC;
+  --blue-light: #E8F2FF;
+  --blue-dark: #004C99;
+  --orange: #FCA106;
+  --orange-light: #FFF4E0;
+  --red: #D13845;
+  --white: #FFFFFF;
+  --gray-50: #F9FAFB;
+  --gray-100: #F3F4F6;
+  --gray-200: #E5E7EB;
+  --gray-300: #D1D5DB;
+  --gray-400: #9CA3AF;
+  --gray-500: #6B7280;
+  --gray-600: #4B5563;
+  --gray-700: #374151;
+  --gray-800: #1F2937;
+  --gray-900: #111827;
+  --shadow-sm: 0 1px 2px rgba(0,0,0,0.05);
+  --shadow-md: 0 4px 6px -1px rgba(0,0,0,0.1), 0 2px 4px -2px rgba(0,0,0,0.1);
+  --shadow-lg: 0 10px 15px -3px rgba(0,0,0,0.1), 0 4px 6px -4px rgba(0,0,0,0.1);
+  --shadow-xl: 0 20px 25px -5px rgba(0,0,0,0.1), 0 8px 10px -6px rgba(0,0,0,0.1);
+  --radius: 12px;
+  --radius-sm: 8px;
+  --radius-lg: 16px;
+}
+
+html { scroll-behavior: smooth; }
+
+body {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  background: var(--gray-50);
+  color: var(--gray-800);
+  line-height: 1.6;
+  min-height: 100vh;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* ===== LAYOUT ===== */
+.app-container {
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 20px 16px;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* ===== HEADER ===== */
+.header {
+  text-align: center;
+  padding: 16px 0 12px;
+  flex-shrink: 0;
+}
+
+.logo {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 20px;
+  font-weight: 800;
+  color: var(--blue);
+  letter-spacing: -0.3px;
+}
+
+.logo svg {
+  width: 32px;
+  height: 32px;
+}
+
+/* ===== SCREENS ===== */
+.screen {
+  display: none;
+  flex: 1;
+  animation: fadeIn 0.3s ease;
+}
+
+.screen.active {
+  display: flex;
+  flex-direction: column;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(8px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes slideInRight {
+  from { opacity: 0; transform: translateX(30px); }
+  to { opacity: 1; transform: translateX(0); }
+}
+
+@keyframes slideInLeft {
+  from { opacity: 0; transform: translateX(-30px); }
+  to { opacity: 1; transform: translateX(0); }
+}
+
+/* ===== WELCOME SCREEN ===== */
+.welcome-card {
+  background: var(--white);
+  border-radius: var(--radius-lg);
+  padding: 48px 40px;
+  box-shadow: var(--shadow-lg);
+  text-align: center;
+  margin-top: 32px;
+  border: 1px solid var(--gray-200);
+}
+
+.welcome-card h1 {
+  font-size: 28px;
+  font-weight: 800;
+  color: var(--blue-dark);
+  margin-bottom: 8px;
+  letter-spacing: -0.5px;
+}
+
+.welcome-card .subtitle {
+  font-size: 15px;
+  color: var(--gray-600);
+  margin-bottom: 32px;
+}
+
+.welcome-info {
+  text-align: left;
+  background: var(--blue-light);
+  border-radius: var(--radius);
+  padding: 20px 24px;
+  margin-bottom: 32px;
+}
+
+.welcome-info h3 {
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--blue);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin-bottom: 12px;
+}
+
+.welcome-info ul {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.welcome-info li {
+  font-size: 14px;
+  color: var(--gray-700);
+  padding-left: 20px;
+  position: relative;
+  line-height: 1.5;
+}
+
+.welcome-info li::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 8px;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--blue);
+}
+
+.btn-primary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  background: var(--blue);
+  color: var(--white);
+  border: none;
+  border-radius: var(--radius);
+  padding: 16px 40px;
+  font-size: 16px;
+  font-weight: 600;
+  font-family: inherit;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  box-shadow: var(--shadow-md);
+}
+
+.btn-primary:hover {
+  background: var(--blue-dark);
+  box-shadow: var(--shadow-lg);
+  transform: translateY(-1px);
+}
+
+.btn-primary:active {
+  transform: translateY(0);
+}
+
+.btn-primary:disabled {
+  background: var(--gray-300);
+  cursor: not-allowed;
+  box-shadow: none;
+  transform: none;
+}
+
+.btn-secondary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  background: var(--white);
+  color: var(--gray-700);
+  border: 2px solid var(--gray-200);
+  border-radius: var(--radius);
+  padding: 14px 28px;
+  font-size: 15px;
+  font-weight: 600;
+  font-family: inherit;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.btn-secondary:hover {
+  border-color: var(--gray-400);
+  background: var(--gray-50);
+}
+
+/* ===== PROGRESS BAR ===== */
+.progress-section {
+  background: var(--white);
+  border-radius: var(--radius);
+  padding: 16px 20px;
+  box-shadow: var(--shadow-sm);
+  margin-bottom: 16px;
+  flex-shrink: 0;
+}
+
+.progress-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.progress-label {
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--gray-600);
+}
+
+.progress-count {
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--blue);
+}
+
+.progress-bar-track {
+  height: 6px;
+  background: var(--gray-200);
+  border-radius: 3px;
+  overflow: hidden;
+}
+
+.progress-bar-fill {
+  height: 100%;
+  background: linear-gradient(90deg, var(--blue), var(--orange));
+  border-radius: 3px;
+  transition: width 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* ===== QUESTION CARD ===== */
+.question-card {
+  background: var(--white);
+  border-radius: var(--radius-lg);
+  padding: 28px 24px;
+  box-shadow: var(--shadow-md);
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.section-badge {
+  display: inline-flex;
+  align-items: center;
+  background: var(--blue-light);
+  color: var(--blue);
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  padding: 5px 12px;
+  border-radius: 20px;
+  margin-bottom: 16px;
+  align-self: flex-start;
+}
+
+.question-text {
+  font-size: 17px;
+  font-weight: 500;
+  color: var(--gray-900);
+  line-height: 1.65;
+  margin-bottom: 28px;
+}
+
+.question-content {
+  animation: fadeIn 0.25s ease;
+}
+
+/* ===== OPTIONS ===== */
+.options-group {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  flex: 1;
+}
+
+.option-btn {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 14px 18px;
+  border: 2px solid var(--gray-200);
+  border-radius: var(--radius);
+  background: var(--white);
+  cursor: pointer;
+  transition: all 0.2s ease;
+  text-align: left;
+  font-family: inherit;
+}
+
+.option-btn:hover {
+  border-color: var(--blue);
+  background: var(--blue-light);
+}
+
+.option-btn.selected {
+  border-color: var(--blue);
+  background: var(--blue-light);
+  box-shadow: 0 0 0 1px var(--blue);
+}
+
+.option-radio {
+  width: 20px;
+  height: 20px;
+  border: 2px solid var(--gray-300);
+  border-radius: 50%;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s ease;
+}
+
+.option-btn.selected .option-radio {
+  border-color: var(--blue);
+  background: var(--blue);
+}
+
+.option-btn.selected .option-radio::after {
+  content: '';
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--white);
+}
+
+.option-label {
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--gray-700);
+  line-height: 1.4;
+}
+
+.option-btn.selected .option-label {
+  color: var(--blue-dark);
+  font-weight: 600;
+}
+
+/* Likert scale specific */
+.likert-options {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+/* ===== NAVIGATION ===== */
+.nav-buttons {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 24px;
+  padding-top: 20px;
+  border-top: 1px solid var(--gray-100);
+  flex-shrink: 0;
+}
+
+.nav-buttons .spacer {
+  flex: 1;
+}
+
+/* ===== COMPLETION SCREEN ===== */
+.completion-card {
+  background: var(--white);
+  border-radius: var(--radius-lg);
+  padding: 48px 32px;
+  box-shadow: var(--shadow-lg);
+  text-align: center;
+  margin-top: 32px;
+}
+
+.completion-icon {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #10B981, #059669);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 24px;
+}
+
+.completion-icon svg {
+  width: 40px;
+  height: 40px;
+  color: white;
+}
+
+.completion-card h2 {
+  font-size: 24px;
+  font-weight: 800;
+  color: var(--gray-900);
+  margin-bottom: 12px;
+}
+
+.completion-card p {
+  font-size: 15px;
+  color: var(--gray-500);
+  max-width: 400px;
+  margin: 0 auto 24px;
+}
+
+.completion-stats {
+  display: flex;
+  justify-content: center;
+  gap: 32px;
+  margin-top: 24px;
+  padding-top: 24px;
+  border-top: 1px solid var(--gray-100);
+}
+
+.stat {
+  text-align: center;
+}
+
+.stat-value {
+  font-size: 28px;
+  font-weight: 800;
+  color: var(--blue);
+  display: block;
+}
+
+.stat-label {
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--gray-400);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+/* ===== FOOTER ===== */
+footer {
+  text-align: center;
+  padding: 24px 0 16px;
+  flex-shrink: 0;
+}
+
+footer a {
+  font-size: 11px;
+  color: var(--gray-400);
+  text-decoration: none;
+}
+
+footer a:hover {
+  color: var(--gray-500);
+  text-decoration: underline;
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 640px) {
+  .app-container {
+    padding: 12px 12px;
+  }
+
+  .welcome-card {
+    padding: 28px 20px;
+    margin-top: 16px;
+  }
+
+  .welcome-card h1 {
+    font-size: 22px;
+  }
+
+  .welcome-info {
+    padding: 16px 18px;
+  }
+
+  .question-card {
+    padding: 20px 16px;
+  }
+
+  .question-text {
+    font-size: 15px;
+    margin-bottom: 20px;
+  }
+
+  .option-btn {
+    padding: 12px 14px;
+    gap: 12px;
+  }
+
+  .option-label {
+    font-size: 13px;
+  }
+
+  .completion-card {
+    padding: 32px 20px;
+  }
+
+  .completion-stats {
+    gap: 20px;
+  }
+
+  .nav-buttons {
+    margin-top: 16px;
+    padding-top: 16px;
+  }
+
+  .btn-primary {
+    padding: 14px 28px;
+    font-size: 15px;
+  }
+
+  .btn-secondary {
+    padding: 12px 20px;
+    font-size: 14px;
+  }
+}
+</style>
+</head>
+<body>
+<div class="app-container">
+  <!-- Header -->
+  <div class="header">
+    <div class="logo">
+      <svg viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <rect width="32" height="32" rx="8" fill="currentColor"/>
+        <text x="16" y="22" text-anchor="middle" font-size="18" font-weight="800" fill="white" font-family="Inter, sans-serif">B</text>
+      </svg>
+      Board Infinity
+    </div>
+  </div>
+
+  <!-- Screen 1: Welcome -->
+  <div id="screen-welcome" class="screen active">
+    <div class="welcome-card">
+      <h1>Career Discovery Test</h1>
+      <p class="subtitle">Find your ideal career path based on your competencies and interests</p>
+      <div class="welcome-info">
+        <h3>Before you begin</h3>
+        <ul>
+          <li>78 questions covering your skills, experience, and career interests</li>
+          <li>Takes approximately 18–22 minutes to complete</li>
+          <li>Answer honestly — there are no right or wrong answers</li>
+          <li>You can go back to previous questions to change your answer</li>
+        </ul>
+      </div>
+      <button class="btn-primary" onclick="startTest()">
+        Start Test
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+      </button>
+    </div>
+  </div>
+
+  <!-- Screen 2: Questions -->
+  <div id="screen-questions" class="screen">
+    <div class="progress-section">
+      <div class="progress-top">
+        <span class="progress-label" id="progress-label">Question 1 of 78</span>
+        <span class="progress-count" id="progress-pct">0%</span>
+      </div>
+      <div class="progress-bar-track">
+        <div class="progress-bar-fill" id="progress-fill" style="width: 0%"></div>
+      </div>
+    </div>
+    <div class="question-card">
+      <div id="question-content" class="question-content">
+        <!-- Populated by JS -->
+      </div>
+      <div class="nav-buttons">
+        <button class="btn-secondary" id="btn-back" onclick="goBack()" style="visibility: hidden;">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
+          Back
+        </button>
+        <div class="spacer"></div>
+        <button class="btn-primary" id="btn-next" onclick="goNext()" disabled>
+          Next
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Screen 3: Completion -->
+  <div id="screen-complete" class="screen">
+    <div class="completion-card">
+      <div class="completion-icon">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+      </div>
+      <h2>Test Completed</h2>
+      <p>Thank you for completing the Career Discovery Test. Your responses have been recorded.</p>
+      <div class="completion-stats">
+        <div class="stat">
+          <span class="stat-value" id="stat-questions">78</span>
+          <span class="stat-label">Questions</span>
+        </div>
+        <div class="stat">
+          <span class="stat-value" id="stat-time">—</span>
+          <span class="stat-label">Minutes</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    <a href="https://www.perplexity.ai/computer" target="_blank" rel="noopener noreferrer">Created with Perplexity Computer</a>
+  </footer>
+</div>
+
+<script>
+// ============================================================
+// DATA
+// ============================================================
+
+const QUESTIONS = [
+  {
+    "id": "Q01",
+    "section": "competency",
+    "cluster": "CL01",
+    "question": "During group discussions, presentations, or interviews at college, I am able to present my ideas confidently and hold the audience's attention\u2014even when challenged.",
+    "format": "likert_5",
+    "scale_labels": [
+      "Strongly Disagree",
+      "Disagree",
+      "Neutral",
+      "Agree",
+      "Strongly Agree"
+    ],
+    "primary_competency": {
+      "name": "Communication (Verbal & Presentation)",
+      "airtable_id": "recABCDE001"
+    },
+    "secondary_competency": {
+      "name": "Leadership & People Management",
+      "airtable_id": "recABCDE004"
+    },
+    "bucket_weights": {
+      "B01": 1.0,
+      "B02": 0.8,
+      "B03": 0.5,
+      "B06": 1.0,
+      "B07": 0.8,
+      "B08": 0.5,
+      "B09": 0.8,
+      "B10": 1.0,
+      "B13": 0.5,
+      "B14": 0.8,
+      "B15": 0.5,
+      "B16": 0.8
+    },
+    "tier": 1,
+    "scoring_note": "High-loading on all client-facing and leadership buckets. Score on this item directly feeds C01 and contributes 0.5\u00d7 to C04 score."
+  },
+  {
+    "id": "Q02",
+    "section": "competency",
+    "cluster": "CL01",
+    "question": "I have drafted formal business documents\u2014such as a project report, SOP, internship presentation, or email brief\u2014where structure and clarity were explicitly praised or where I was asked to replicate the format.",
+    "format": "yes_partial_no",
+    "scale_labels": [
+      "Yes, explicitly recognised",
+      "Yes, done but not highlighted",
+      "No, haven't done this"
+    ],
+    "primary_competency": {
+      "name": "Written Communication & Business Writing",
+      "airtable_id": "recABCDE002"
+    },
+    "secondary_competency": {
+      "name": "Presentation Design & Data Storytelling",
+      "airtable_id": "recABCDE094"
+    },
+    "bucket_weights": {
+      "B01": 0.5,
+      "B02": 0.8,
+      "B06": 1.0,
+      "B07": 0.5,
+      "B09": 0.8,
+      "B10": 0.5,
+      "B11": 0.5,
+      "B16": 1.0
+    },
+    "tier": 1,
+    "scoring_note": "Behaviorally anchored. 'Yes, explicitly recognised'=5, 'Done, not highlighted'=3, 'No'=1. Feeds C02 directly; 0.5\u00d7 to C94."
+  },
+  {
+    "id": "Q03",
+    "section": "competency",
+    "cluster": "CL02",
+    "question": "When faced with a new or ambiguous business problem\u2014like a declining sales trend or an operational bottleneck\u2014I naturally break it down into sub-problems, identify root causes, and generate structured solutions.",
+    "format": "likert_5",
+    "scale_labels": [
+      "Strongly Disagree",
+      "Disagree",
+      "Neutral",
+      "Agree",
+      "Strongly Agree"
+    ],
+    "primary_competency": {
+      "name": "Analytical Thinking & Problem Solving",
+      "airtable_id": "recABCDE003"
+    },
+    "secondary_competency": {
+      "name": "Structured Thinking & First-Principles Reasoning",
+      "airtable_id": "recABCDE007"
+    },
+    "bucket_weights": {
+      "B04": 0.8,
+      "B05": 0.8,
+      "B06": 1.0,
+      "B08": 0.8,
+      "B09": 1.0,
+      "B10": 1.0,
+      "B11": 0.8,
+      "B12": 0.8,
+      "B14": 0.5,
+      "B15": 0.8,
+      "B16": 0.8
+    },
+    "tier": 1,
+    "scoring_note": "Feeds C03 directly; 0.5\u00d7 to C07. High discriminatory power between analytical roles (Consulting, PM, Analytics) and process/functional roles."
+  },
+  {
+    "id": "Q04",
+    "section": "competency",
+    "cluster": "CL02",
+    "question": "I have solved at least one business case study\u2014whether in a competition, classroom, or mock interview setting\u2014by starting with a clear hypothesis and testing it with data or logical reasoning before arriving at a recommendation.",
+    "format": "yes_partial_no",
+    "scale_labels": [
+      "Yes, done this in a competition or formal setting",
+      "Yes, in a classroom/informal setting",
+      "No, haven't approached problems this way"
+    ],
+    "primary_competency": {
+      "name": "Case Solving & Hypothesis-Driven Thinking",
+      "airtable_id": "recABCDE039"
+    },
+    "secondary_competency": {
+      "name": "Analytical Thinking & Problem Solving",
+      "airtable_id": "recABCDE003"
+    },
+    "bucket_weights": {
+      "B06": 1.0,
+      "B09": 0.8,
+      "B10": 0.8,
+      "B11": 0.8,
+      "B12": 0.5
+    },
+    "tier": 2,
+    "scoring_note": "Strong anchor for Consulting fit. 'Competition setting'=5, 'Classroom'=3, 'No'=1. 0.5\u00d7 contribution to C03."
+  },
+  {
+    "id": "Q05",
+    "section": "competency",
+    "cluster": "CL03",
+    "question": "I have led a team\u2014in college committees, sports, a project, or an internship\u2014where I was responsible for both the outcome and the performance of team members, not just my own deliverables.",
+    "format": "yes_partial_no",
+    "scale_labels": [
+      "Yes, led a team with formal responsibility",
+      "Yes, informally led or coordinated a group",
+      "No, primarily worked as a team member"
+    ],
+    "primary_competency": {
+      "name": "Leadership & People Management",
+      "airtable_id": "recABCDE004"
+    },
+    "secondary_competency": {
+      "name": "Cross-Functional Team Leadership",
+      "airtable_id": "recABCDE060"
+    },
+    "bucket_weights": {
+      "B01": 0.8,
+      "B06": 0.8,
+      "B07": 1.0,
+      "B08": 0.8,
+      "B09": 1.0,
+      "B10": 1.0,
+      "B13": 0.8,
+      "B14": 0.8,
+      "B15": 0.5
+    },
+    "tier": 1,
+    "scoring_note": "'Formal responsibility'=5, 'Informal'=3, 'Team member only'=1. Directly feeds C04; 0.5\u00d7 to C60."
+  },
+  {
+    "id": "Q06",
+    "section": "competency",
+    "cluster": "CL03",
+    "question": "I am able to get people who do not report to me\u2014peers, seniors, or cross-functional colleagues\u2014to align with my recommendations or take action, without relying on formal authority or position.",
+    "format": "likert_5",
+    "scale_labels": [
+      "Strongly Disagree",
+      "Disagree",
+      "Neutral",
+      "Agree",
+      "Strongly Agree"
+    ],
+    "primary_competency": {
+      "name": "Stakeholder Management & Influencing",
+      "airtable_id": "recABCDE008"
+    },
+    "secondary_competency": {
+      "name": "Objection Handling & Persuasion",
+      "airtable_id": "recABCDE014"
+    },
+    "bucket_weights": {
+      "B01": 0.8,
+      "B06": 1.0,
+      "B07": 0.8,
+      "B09": 1.0,
+      "B10": 0.8,
+      "B11": 0.8,
+      "B15": 0.5,
+      "B16": 0.8
+    },
+    "tier": 1,
+    "scoring_note": "Feeds C08 directly; 0.5\u00d7 to C14 for Sales/Consulting. Strong discriminator for PM and Consulting."
+  },
+  {
+    "id": "Q07",
+    "section": "competency",
+    "cluster": "CL19",
+    "question": "When a project plan changed significantly mid-way\u2014due to a client's shifting requirement, a team member dropping out, or new information\u2014I was able to re-orient quickly and kept the team productive.",
+    "format": "likert_5",
+    "scale_labels": [
+      "Strongly Disagree",
+      "Disagree",
+      "Neutral",
+      "Agree",
+      "Strongly Agree"
+    ],
+    "primary_competency": {
+      "name": "Adaptability & Learning Agility",
+      "airtable_id": "recABCDE006"
+    },
+    "secondary_competency": {
+      "name": "Teamwork & Collaboration",
+      "airtable_id": "recABCDE005"
+    },
+    "bucket_weights": {
+      "B01": 0.5,
+      "B03": 0.8,
+      "B06": 0.5,
+      "B07": 0.8,
+      "B08": 0.5,
+      "B09": 0.8,
+      "B10": 0.8,
+      "B11": 0.5,
+      "B13": 0.5,
+      "B15": 0.5,
+      "B16": 0.5
+    },
+    "tier": 1,
+    "scoring_note": "Feeds C06 primarily; 0.5\u00d7 to C05. Particularly discriminatory for fast-paced roles: Growth Marketing, PM, Startups."
+  },
+  {
+    "id": "Q08",
+    "section": "competency",
+    "cluster": "CL04",
+    "question": "I can comfortably read a P&L statement, identify which line items are driving profitability problems, and suggest at least two actionable levers to improve margins\u2014without needing a finance textbook nearby.",
+    "format": "likert_5",
+    "scale_labels": [
+      "Strongly Disagree",
+      "Disagree",
+      "Neutral",
+      "Agree",
+      "Strongly Agree"
+    ],
+    "primary_competency": {
+      "name": "Financial Literacy & P&L Thinking",
+      "airtable_id": "recABCDE034"
+    },
+    "secondary_competency": {
+      "name": "Financial Statement Analysis (FSA)",
+      "airtable_id": "recABCDE031"
+    },
+    "bucket_weights": {
+      "B01": 0.5,
+      "B04": 0.8,
+      "B05": 1.0,
+      "B06": 0.8,
+      "B09": 0.8,
+      "B10": 1.0,
+      "B13": 0.8,
+      "B14": 0.8
+    },
+    "tier": 1,
+    "scoring_note": "Feeds C34 directly; 0.5\u00d7 to C31. High weight for FP&A, IB, General Management, E-Commerce."
+  },
+  {
+    "id": "Q09",
+    "section": "competency",
+    "cluster": "CL04",
+    "question": "I can mentally calculate returns, breakeven points, or unit economics (e.g., CAC, LTV, payback period) quickly and accurately when reviewing a business scenario or case.",
+    "format": "likert_5",
+    "scale_labels": [
+      "Strongly Disagree",
+      "Disagree",
+      "Neutral",
+      "Agree",
+      "Strongly Agree"
+    ],
+    "primary_competency": {
+      "name": "Numerical Aptitude (SSPD / ROI Calculations)",
+      "airtable_id": "recABCDE035"
+    },
+    "secondary_competency": {
+      "name": "Financial Literacy & P&L Thinking",
+      "airtable_id": "recABCDE034"
+    },
+    "bucket_weights": {
+      "B04": 1.0,
+      "B05": 1.0,
+      "B08": 0.5,
+      "B12": 0.8,
+      "B14": 1.0
+    },
+    "tier": 1,
+    "scoring_note": "Feeds C35 directly; 0.5\u00d7 to C34. Strong discriminator for Finance, Analytics, BFSI."
+  },
+  {
+    "id": "Q10",
+    "section": "competency",
+    "cluster": "CL12",
+    "question": "I have built or can independently build a 3-statement financial model (P&L, Balance Sheet, Cash Flow) in Excel\u2014including linking assumptions, projecting revenue, and deriving free cash flow.",
+    "format": "yes_partial_no",
+    "scale_labels": [
+      "Yes, built one independently (internship/project/course)",
+      "Partially\u2014built portions or used a template",
+      "No, not yet"
+    ],
+    "primary_competency": {
+      "name": "Financial Modelling & Valuation",
+      "airtable_id": "recABCDE029"
+    },
+    "secondary_competency": {
+      "name": "Financial Statement Analysis (FSA)",
+      "airtable_id": "recABCDE031"
+    },
+    "bucket_weights": {
+      "B04": 1.0,
+      "B05": 1.0,
+      "B14": 0.8
+    },
+    "tier": 2,
+    "scoring_note": "Highly discriminatory for IB/FP&A/BFSI. 'Yes independently'=5, 'Partial'=3, 'No'=1."
+  },
+  {
+    "id": "Q11",
+    "section": "competency",
+    "cluster": "CL12",
+    "question": "I follow capital markets\u2014Indian equity, debt, or derivatives\u2014and can explain the current macro drivers affecting stock valuations, yield curves, or credit spreads to a peer.",
+    "format": "yes_partial_no",
+    "scale_labels": [
+      "Yes, actively track and can explain",
+      "Aware, but surface-level understanding",
+      "No, don't track markets"
+    ],
+    "primary_competency": {
+      "name": "Capital Markets & Investment Knowledge",
+      "airtable_id": "recABCDE030"
+    },
+    "secondary_competency": {
+      "name": "Financial Literacy & P&L Thinking",
+      "airtable_id": "recABCDE034"
+    },
+    "bucket_weights": {
+      "B04": 1.0,
+      "B14": 0.8
+    },
+    "tier": 2,
+    "scoring_note": "'Actively track'=5, 'Surface-level'=3, 'No'=1. Primarily for IB and BFSI tracks."
+  },
+  {
+    "id": "Q12",
+    "section": "competency",
+    "cluster": "CL12",
+    "question": "Given a set of financial statements, I can identify red flags\u2014such as rising receivables relative to revenue, margin compression, or unusual capital expenditure\u2014that signal potential financial stress.",
+    "format": "likert_5",
+    "scale_labels": [
+      "Strongly Disagree",
+      "Disagree",
+      "Neutral",
+      "Agree",
+      "Strongly Agree"
+    ],
+    "primary_competency": {
+      "name": "Financial Statement Analysis (FSA)",
+      "airtable_id": "recABCDE031"
+    },
+    "secondary_competency": {
+      "name": "Risk Management & Compliance",
+      "airtable_id": "recABCDE033"
+    },
+    "bucket_weights": {
+      "B04": 1.0,
+      "B05": 0.8,
+      "B06": 0.5,
+      "B14": 1.0
+    },
+    "tier": 2,
+    "scoring_note": "Feeds C31 directly; 0.5\u00d7 to C33 for risk management. Highly discriminatory for IB, FP&A, BFSI."
+  },
+  {
+    "id": "Q13",
+    "section": "competency",
+    "cluster": "CL13",
+    "question": "When evaluating a new business opportunity, I naturally think through competitive dynamics, industry attractiveness, and the company's strategic position\u2014using frameworks like Porter's Five Forces or SWOT\u2014rather than jumping to solutions.",
+    "format": "likert_5",
+    "scale_labels": [
+      "Strongly Disagree",
+      "Disagree",
+      "Neutral",
+      "Agree",
+      "Strongly Agree"
+    ],
+    "primary_competency": {
+      "name": "Strategic Frameworks (SWOT, Porter's, BCG, etc.)",
+      "airtable_id": "recABCDE040"
+    },
+    "secondary_competency": {
+      "name": "Structured Thinking & First-Principles Reasoning",
+      "airtable_id": "recABCDE007"
+    },
+    "bucket_weights": {
+      "B06": 1.0,
+      "B09": 0.5,
+      "B10": 0.8,
+      "B15": 0.5
+    },
+    "tier": 2,
+    "scoring_note": "Feeds C40 directly; 0.5\u00d7 to C07. Consulting + GM high weight."
+  },
+  {
+    "id": "Q14",
+    "section": "competency",
+    "cluster": "CL13",
+    "question": "I can identify the right market to enter, define the customer segment, articulate the value proposition, and outline the distribution channel\u2014i.e., develop a coherent Go-To-Market plan\u2014for a new product or service.",
+    "format": "likert_5",
+    "scale_labels": [
+      "Strongly Disagree",
+      "Disagree",
+      "Neutral",
+      "Agree",
+      "Strongly Agree"
+    ],
+    "primary_competency": {
+      "name": "Market Sizing & Go-To-Market Strategy",
+      "airtable_id": "recABCDE021"
+    },
+    "secondary_competency": {
+      "name": "Business Model Design & Innovation",
+      "airtable_id": "recABCDE063"
+    },
+    "bucket_weights": {
+      "B02": 0.5,
+      "B06": 0.8,
+      "B09": 1.0,
+      "B10": 1.0
+    },
+    "tier": 2,
+    "scoring_note": "Feeds C21 directly; 0.5\u00d7 to C63. Strong for PM and General Management."
+  },
+  {
+    "id": "Q15",
+    "section": "competency",
+    "cluster": "CL05",
+    "question": "I am comfortable learning and using new digital/SaaS tools\u2014such as CRM systems, project management software (Trello/Asana/Jira), or analytics dashboards\u2014within days, without needing formal training.",
+    "format": "likert_5",
+    "scale_labels": [
+      "Strongly Disagree",
+      "Disagree",
+      "Neutral",
+      "Agree",
+      "Strongly Agree"
+    ],
+    "primary_competency": {
+      "name": "Tech-Savviness & Digital Tool Fluency",
+      "airtable_id": "recABCDE028"
+    },
+    "secondary_competency": {
+      "name": "Adaptability & Learning Agility",
+      "airtable_id": "recABCDE006"
+    },
+    "bucket_weights": {
+      "B03": 0.8,
+      "B09": 0.5,
+      "B11": 0.8,
+      "B12": 0.8,
+      "B13": 0.5
+    },
+    "tier": 1,
+    "scoring_note": "Feeds C28 directly; 0.5\u00d7 to C06. High weight for Analytics, Digital Marketing, BA/IT."
+  },
+  {
+    "id": "Q16",
+    "section": "competency",
+    "cluster": "CL05",
+    "question": "I understand what an API is, can read and interpret a basic SQL query result, and have at least a conceptual grasp of how software systems or databases are structured\u2014even if I don't write code.",
+    "format": "yes_partial_no",
+    "scale_labels": [
+      "Yes, I can do all three",
+      "Partial\u2014I understand 1-2 of these",
+      "No, these are unfamiliar"
+    ],
+    "primary_competency": {
+      "name": "Technical Literacy (APIs, SQL, Basic Coding Understanding)",
+      "airtable_id": "recABCDE062"
+    },
+    "secondary_competency": {
+      "name": "Tech-Savviness & Digital Tool Fluency",
+      "airtable_id": "recABCDE028"
+    },
+    "bucket_weights": {
+      "B09": 0.8,
+      "B11": 1.0,
+      "B12": 0.8
+    },
+    "tier": 2,
+    "scoring_note": "'All three'=5, 'Partial'=3, 'No'=1. Feeds C62; 0.5\u00d7 to C28."
+  },
+  {
+    "id": "Q17",
+    "section": "competency",
+    "cluster": "CL06",
+    "question": "When given a large dataset or a pile of market research reports, I can identify the 2-3 most critical insights, explain why they matter, and build a coherent narrative around them for a decision-maker.",
+    "format": "likert_5",
+    "scale_labels": [
+      "Strongly Disagree",
+      "Disagree",
+      "Neutral",
+      "Agree",
+      "Strongly Agree"
+    ],
+    "primary_competency": {
+      "name": "Research Synthesis & Insight Generation",
+      "airtable_id": "recABCDE042"
+    },
+    "secondary_competency": {
+      "name": "Analytical Thinking & Problem Solving",
+      "airtable_id": "recABCDE003"
+    },
+    "bucket_weights": {
+      "B06": 1.0,
+      "B09": 0.8,
+      "B12": 1.0,
+      "B16": 0.8
+    },
+    "tier": 1,
+    "scoring_note": "Feeds C42 directly; 0.5\u00d7 to C03. Consulting, Analytics, and Development Sector are the primary beneficiaries."
+  },
+  {
+    "id": "Q18",
+    "section": "competency",
+    "cluster": "CL06",
+    "question": "I have created dashboards, charts, or visualisations\u2014using Excel, Power BI, Tableau, or even Google Sheets\u2014that clearly communicated trends or patterns to a non-technical audience.",
+    "format": "yes_partial_no",
+    "scale_labels": [
+      "Yes, built and presented formal dashboards",
+      "Yes, built basic charts/visualisations informally",
+      "No, haven't done this"
+    ],
+    "primary_competency": {
+      "name": "Data Visualisation & Storytelling with Data",
+      "airtable_id": "recABCDE073"
+    },
+    "secondary_competency": {
+      "name": "Business Intelligence Tools (Power BI, Tableau)",
+      "airtable_id": "recABCDE076"
+    },
+    "bucket_weights": {
+      "B05": 0.5,
+      "B06": 0.8,
+      "B09": 0.5,
+      "B12": 1.0,
+      "B16": 0.5
+    },
+    "tier": 2,
+    "scoring_note": "'Formal dashboards'=5, 'Basic charts'=3, 'No'=1. Feeds C73; 0.5\u00d7 to C76."
+  },
+  {
+    "id": "Q19",
+    "section": "competency",
+    "cluster": "CL06",
+    "question": "I can correctly apply and interpret at least three statistical concepts\u2014such as regression, significance testing, confidence intervals, or correlation vs. causation\u2014in a business context.",
+    "format": "yes_partial_no",
+    "scale_labels": [
+      "Yes, comfortably apply and explain",
+      "Partially\u2014know the concepts but struggle with application",
+      "No, not my area"
+    ],
+    "primary_competency": {
+      "name": "Statistical Analysis & Hypothesis Testing",
+      "airtable_id": "recABCDE071"
+    },
+    "secondary_competency": {
+      "name": "Analytical Thinking & Problem Solving",
+      "airtable_id": "recABCDE003"
+    },
+    "bucket_weights": {
+      "B12": 1.0,
+      "B15": 0.5
+    },
+    "tier": 2,
+    "scoring_note": "'Yes, comfortably'=5, 'Partial'=3, 'No'=1. Primarily discriminates Analytics from other tracks."
+  },
+  {
+    "id": "Q20",
+    "section": "competency",
+    "cluster": "CL06",
+    "question": "I have written SQL queries to extract, filter, and aggregate data from a relational database\u2014or have completed a SQL course and solved practical query problems.",
+    "format": "yes_partial_no",
+    "scale_labels": [
+      "Yes, written queries in a real project/internship/course",
+      "Learned basics but haven't applied it",
+      "No SQL exposure"
+    ],
+    "primary_competency": {
+      "name": "SQL & Database Querying",
+      "airtable_id": "recABCDE072"
+    },
+    "secondary_competency": {
+      "name": "Technical Literacy (APIs, SQL, Basic Coding Understanding)",
+      "airtable_id": "recABCDE062"
+    },
+    "bucket_weights": {
+      "B11": 0.8,
+      "B12": 1.0
+    },
+    "tier": 2,
+    "scoring_note": "'Real project'=5, 'Basics'=3, 'None'=1. Strong discriminator for Analytics and BA tracks."
+  },
+  {
+    "id": "Q21",
+    "section": "competency",
+    "cluster": "CL06",
+    "question": "I have worked with Python or R to clean data, run analyses, or build models\u2014whether in a course project, hackathon, or self-study.",
+    "format": "yes_partial_no",
+    "scale_labels": [
+      "Yes, used Python/R in a real project or competition",
+      "Done basic tutorials/coursework only",
+      "No programming experience"
+    ],
+    "primary_competency": {
+      "name": "Python / R for Data Analysis",
+      "airtable_id": "recABCDE075"
+    },
+    "secondary_competency": {
+      "name": "Machine Learning Fundamentals",
+      "airtable_id": "recABCDE074"
+    },
+    "bucket_weights": {
+      "B12": 1.0
+    },
+    "tier": 3,
+    "scoring_note": "'Real project'=5, 'Tutorials'=3, 'None'=1. Dedicated to Analytics track; also 0.3\u00d7 to C74."
+  },
+  {
+    "id": "Q22",
+    "section": "competency",
+    "cluster": "CL08",
+    "question": "I have successfully sold something\u2014a product, service, sponsorship, or idea\u2014where I had to convince someone who was initially hesitant or said 'no', and ultimately closed the deal.",
+    "format": "yes_partial_no",
+    "scale_labels": [
+      "Yes, in a professional/internship context",
+      "Yes, informally (college fest, side project, personal)",
+      "No, haven't experienced this"
+    ],
+    "primary_competency": {
+      "name": "Sales Acumen & Negotiation",
+      "airtable_id": "recABCDE011"
+    },
+    "secondary_competency": {
+      "name": "Objection Handling & Persuasion",
+      "airtable_id": "recABCDE014"
+    },
+    "bucket_weights": {
+      "B01": 1.0,
+      "B10": 0.5,
+      "B13": 0.8,
+      "B14": 0.5
+    },
+    "tier": 2,
+    "scoring_note": "'Professional'=5, 'Informal'=3, 'No'=1. Strong discriminator for Sales/BD and E-Commerce."
+  },
+  {
+    "id": "Q23",
+    "section": "competency",
+    "cluster": "CL08",
+    "question": "I am energised by having a clear revenue or number target, and I find satisfaction in hitting\u2014or exceeding\u2014it, even when it requires persistent follow-up.",
+    "format": "likert_5",
+    "scale_labels": [
+      "Strongly Disagree",
+      "Disagree",
+      "Neutral",
+      "Agree",
+      "Strongly Agree"
+    ],
+    "primary_competency": {
+      "name": "Target Orientation & Revenue Focus",
+      "airtable_id": "recABCDE016"
+    },
+    "secondary_competency": {
+      "name": "Entrepreneurial Mindset & Risk Tolerance",
+      "airtable_id": "recABCDE009"
+    },
+    "bucket_weights": {
+      "B01": 1.0,
+      "B10": 0.8,
+      "B13": 0.8,
+      "B14": 0.8
+    },
+    "tier": 2,
+    "scoring_note": "Feeds C16 directly; 0.5\u00d7 to C09 for growth-oriented buckets. High discriminatory power between Sales and non-Sales types."
+  },
+  {
+    "id": "Q24",
+    "section": "competency",
+    "cluster": "CL08",
+    "question": "I have managed a pipeline of leads or relationships\u2014tracking follow-up dates, conversation history, and next actions\u2014whether in a CRM tool or a structured spreadsheet.",
+    "format": "yes_partial_no",
+    "scale_labels": [
+      "Yes, used a formal CRM (Salesforce, HubSpot, Zoho, etc.)",
+      "Yes, tracked via spreadsheet or manual system",
+      "No, haven't managed a formal pipeline"
+    ],
+    "primary_competency": {
+      "name": "Prospecting & Pipeline Management",
+      "airtable_id": "recABCDE013"
+    },
+    "secondary_competency": {
+      "name": "Client Relationship Management (CRM)",
+      "airtable_id": "recABCDE012"
+    },
+    "bucket_weights": {
+      "B01": 1.0,
+      "B14": 0.8
+    },
+    "tier": 2,
+    "scoring_note": "'Formal CRM'=5, 'Spreadsheet'=3, 'No'=1. Dedicated to Sales/BD and BFSI."
+  },
+  {
+    "id": "Q25",
+    "section": "competency",
+    "cluster": "CL07",
+    "question": "I can explain the decision-making journey of a typical Indian urban consumer\u2014what triggers their need, how they evaluate options, what builds trust, and what causes purchase abandonment\u2014for a specific product category I've researched.",
+    "format": "likert_5",
+    "scale_labels": [
+      "Strongly Disagree",
+      "Disagree",
+      "Neutral",
+      "Agree",
+      "Strongly Agree"
+    ],
+    "primary_competency": {
+      "name": "Consumer Behaviour & Market Research",
+      "airtable_id": "recABCDE018"
+    },
+    "secondary_competency": {
+      "name": "Customer Segmentation & Targeting",
+      "airtable_id": "recABCDE022"
+    },
+    "bucket_weights": {
+      "B02": 1.0,
+      "B03": 0.5,
+      "B09": 0.8,
+      "B13": 1.0,
+      "B15": 0.5
+    },
+    "tier": 2,
+    "scoring_note": "Feeds C18; 0.5\u00d7 to C22. Strong for Brand, E-Commerce, and PM roles."
+  },
+  {
+    "id": "Q26",
+    "section": "competency",
+    "cluster": "CL07",
+    "question": "When designing a campaign or product offering, I instinctively segment the audience first\u2014by demographics, psychographics, or behaviour\u2014before deciding on messaging, pricing, or channel.",
+    "format": "likert_5",
+    "scale_labels": [
+      "Strongly Disagree",
+      "Disagree",
+      "Neutral",
+      "Agree",
+      "Strongly Agree"
+    ],
+    "primary_competency": {
+      "name": "Customer Segmentation & Targeting",
+      "airtable_id": "recABCDE022"
+    },
+    "secondary_competency": {
+      "name": "Brand Strategy & Positioning",
+      "airtable_id": "recABCDE017"
+    },
+    "bucket_weights": {
+      "B02": 1.0,
+      "B03": 0.8,
+      "B09": 0.8,
+      "B12": 0.5,
+      "B13": 0.8
+    },
+    "tier": 2,
+    "scoring_note": "Feeds C22; 0.5\u00d7 to C17. High weight for Marketing, Digital, PM, E-Commerce."
+  },
+  {
+    "id": "Q27",
+    "section": "competency",
+    "cluster": "CL07",
+    "question": "I have worked on\u2014or can independently create\u2014a brand positioning statement for a product, including differentiation from competitors, target segment definition, and the core emotional/functional benefit.",
+    "format": "yes_partial_no",
+    "scale_labels": [
+      "Yes, done this in a live project or internship",
+      "Done this as an academic exercise",
+      "No, haven't done this"
+    ],
+    "primary_competency": {
+      "name": "Brand Strategy & Positioning",
+      "airtable_id": "recABCDE017"
+    },
+    "secondary_competency": {
+      "name": "Market Sizing & Go-To-Market Strategy",
+      "airtable_id": "recABCDE021"
+    },
+    "bucket_weights": {
+      "B02": 1.0,
+      "B10": 0.5,
+      "B13": 0.8
+    },
+    "tier": 2,
+    "scoring_note": "'Live project'=5, 'Academic'=3, 'No'=1. Primarily for Brand Management."
+  },
+  {
+    "id": "Q28",
+    "section": "competency",
+    "cluster": "CL09",
+    "question": "I have planned and executed a full marketing campaign\u2014defining objectives, selecting channels, creating content, setting a budget, and measuring ROI\u2014whether for a brand, event, or personal project.",
+    "format": "yes_partial_no",
+    "scale_labels": [
+      "Yes, end-to-end (internship or college brand role)",
+      "Yes, partial execution (one or two phases)",
+      "No, haven't run a campaign"
+    ],
+    "primary_competency": {
+      "name": "Marketing Campaign Planning & Execution",
+      "airtable_id": "recABCDE019"
+    },
+    "secondary_competency": {
+      "name": "Marketing Analytics & Attribution",
+      "airtable_id": "recABCDE026"
+    },
+    "bucket_weights": {
+      "B02": 1.0,
+      "B03": 0.8,
+      "B13": 0.5
+    },
+    "tier": 2,
+    "scoring_note": "'End-to-end'=5, 'Partial'=3, 'No'=1. Feeds C19; 0.5\u00d7 to C26."
+  },
+  {
+    "id": "Q29",
+    "section": "competency",
+    "cluster": "CL09",
+    "question": "I have run paid digital campaigns (Google Ads, Meta Ads, LinkedIn Ads) or managed organic SEO/SEM efforts, and I can explain how bidding strategy, Quality Score, and keyword intent affect campaign performance.",
+    "format": "yes_partial_no",
+    "scale_labels": [
+      "Yes, managed live campaigns with budget",
+      "Learned through courses/simulations",
+      "No exposure to paid digital campaigns"
+    ],
+    "primary_competency": {
+      "name": "SEO/SEM & Performance Marketing",
+      "airtable_id": "recABCDE023"
+    },
+    "secondary_competency": {
+      "name": "Marketing Analytics & Attribution",
+      "airtable_id": "recABCDE026"
+    },
+    "bucket_weights": {
+      "B03": 1.0,
+      "B13": 0.5
+    },
+    "tier": 3,
+    "scoring_note": "'Live campaigns'=5, 'Courses'=3, 'No'=1. Primarily for Digital Marketing bucket; also C26."
+  },
+  {
+    "id": "Q30",
+    "section": "competency",
+    "cluster": "CL09",
+    "question": "I understand the concept of a marketing funnel (Awareness \u2192 Consideration \u2192 Purchase \u2192 Retention), can identify where a specific funnel is leaking, and suggest experiments to improve conversion.",
+    "format": "likert_5",
+    "scale_labels": [
+      "Strongly Disagree",
+      "Disagree",
+      "Neutral",
+      "Agree",
+      "Strongly Agree"
+    ],
+    "primary_competency": {
+      "name": "Growth Hacking & Funnel Optimisation",
+      "airtable_id": "recABCDE025"
+    },
+    "secondary_competency": {
+      "name": "A/B Testing & Experimentation Mindset",
+      "airtable_id": "recABCDE061"
+    },
+    "bucket_weights": {
+      "B03": 1.0,
+      "B09": 0.8,
+      "B13": 0.8
+    },
+    "tier": 2,
+    "scoring_note": "Feeds C25; 0.5\u00d7 to C61. Strong for Digital Marketing, PM, E-Commerce."
+  },
+  {
+    "id": "Q31",
+    "section": "competency",
+    "cluster": "CL09",
+    "question": "I have managed a social media account or content calendar\u2014writing posts, selecting formats, tracking engagement metrics, and adjusting strategy based on data.",
+    "format": "yes_partial_no",
+    "scale_labels": [
+      "Yes, managed a brand/institutional account",
+      "Yes, managed my own or a college page",
+      "No formal social media management"
+    ],
+    "primary_competency": {
+      "name": "Social Media Strategy & Content Creation",
+      "airtable_id": "recABCDE024"
+    },
+    "secondary_competency": {
+      "name": "Digital Sales & Social Selling",
+      "airtable_id": "recABCDE015"
+    },
+    "bucket_weights": {
+      "B02": 0.5,
+      "B03": 1.0,
+      "B16": 0.5
+    },
+    "tier": 2,
+    "scoring_note": "'Brand account'=5, 'Personal/college'=3, 'No'=1. Feeds C24; 0.5\u00d7 to C15."
+  },
+  {
+    "id": "Q32",
+    "section": "competency",
+    "cluster": "CL10",
+    "question": "I can evaluate a candidate's fit for a role\u2014by designing or using structured interview questions, assessment rubrics, or psychometric tools\u2014beyond just reviewing their resume.",
+    "format": "likert_5",
+    "scale_labels": [
+      "Strongly Disagree",
+      "Disagree",
+      "Neutral",
+      "Agree",
+      "Strongly Agree"
+    ],
+    "primary_competency": {
+      "name": "Talent Acquisition & Recruitment",
+      "airtable_id": "recABCDE043"
+    },
+    "secondary_competency": {
+      "name": "Organisational Behaviour & Culture Building",
+      "airtable_id": "recABCDE047"
+    },
+    "bucket_weights": {
+      "B07": 1.0
+    },
+    "tier": 3,
+    "scoring_note": "Dedicated HR question. Feeds C43; 0.5\u00d7 to C47. Also measures structured thinking applied to people context."
+  },
+  {
+    "id": "Q33",
+    "section": "competency",
+    "cluster": "CL10",
+    "question": "I have designed or facilitated a learning module, workshop, or training session\u2014where I identified skill gaps, created content, and measured whether learning occurred.",
+    "format": "yes_partial_no",
+    "scale_labels": [
+      "Yes, designed and delivered formally (internship/NGO/college)",
+      "Yes, informally (peer tutoring, team training)",
+      "No"
+    ],
+    "primary_competency": {
+      "name": "Learning & Development (L&D) Design",
+      "airtable_id": "recABCDE044"
+    },
+    "secondary_competency": {
+      "name": "Leadership & People Management",
+      "airtable_id": "recABCDE004"
+    },
+    "bucket_weights": {
+      "B07": 1.0
+    },
+    "tier": 3,
+    "scoring_note": "'Formal delivery'=5, 'Informal'=3, 'No'=1. Dedicated to HR; double-scores C44 + C04."
+  },
+  {
+    "id": "Q34",
+    "section": "competency",
+    "cluster": "CL10",
+    "question": "I have worked on designing a compensation structure, incentive plan, or benefits policy\u2014even in an academic, case-based, or internship context\u2014balancing fairness, compliance, and motivation.",
+    "format": "yes_partial_no",
+    "scale_labels": [
+      "Yes, in a live project or internship",
+      "In an academic/case competition",
+      "No experience"
+    ],
+    "primary_competency": {
+      "name": "Compensation & Benefits / Total Rewards",
+      "airtable_id": "recABCDE046"
+    },
+    "secondary_competency": {
+      "name": "Financial Literacy & P&L Thinking",
+      "airtable_id": "recABCDE034"
+    },
+    "bucket_weights": {
+      "B07": 1.0
+    },
+    "tier": 3,
+    "scoring_note": "'Live project'=5, 'Academic'=3, 'No'=1. Also captures C34 at 0.3\u00d7 for HR bucket's financial dimension."
+  },
+  {
+    "id": "Q35",
+    "section": "competency",
+    "cluster": "CL20",
+    "question": "I genuinely believe that diverse teams (by background, gender, thought) produce better outcomes, and I have actively taken steps to be more inclusive\u2014even when it was inconvenient or slowed a decision.",
+    "format": "likert_5",
+    "scale_labels": [
+      "Strongly Disagree",
+      "Disagree",
+      "Neutral",
+      "Agree",
+      "Strongly Agree"
+    ],
+    "primary_competency": {
+      "name": "Diversity, Equity & Inclusion (DEI)",
+      "airtable_id": "recABCDE050"
+    },
+    "secondary_competency": {
+      "name": "Values-Driven Decision Making & Social Sensitivity",
+      "airtable_id": "recABCDE093"
+    },
+    "bucket_weights": {
+      "B07": 0.8,
+      "B16": 1.0
+    },
+    "tier": 2,
+    "scoring_note": "Feeds C50; 0.5\u00d7 to C93. HR and Social Impact are the primary scorers."
+  },
+  {
+    "id": "Q36",
+    "section": "competency",
+    "cluster": "CL10",
+    "question": "I understand the basics of Indian labour law\u2014such as key provisions under the Factories Act, POSH Act, or Industrial Disputes Act\u2014and can identify compliance risks in an HR process.",
+    "format": "yes_partial_no",
+    "scale_labels": [
+      "Yes, aware and can apply to HR scenarios",
+      "Basic conceptual awareness only",
+      "No knowledge of labour law"
+    ],
+    "primary_competency": {
+      "name": "Labour Law & HR Compliance",
+      "airtable_id": "recABCDE049"
+    },
+    "secondary_competency": {
+      "name": "Corporate Governance & Ethics",
+      "airtable_id": "recABCDE065"
+    },
+    "bucket_weights": {
+      "B07": 1.0
+    },
+    "tier": 3,
+    "scoring_note": "'Can apply'=5, 'Basic'=3, 'No'=1. Dedicated to HR. Double-scores C49 + C65."
+  },
+  {
+    "id": "Q37",
+    "section": "competency",
+    "cluster": "CL11",
+    "question": "I can explain the end-to-end journey of a product from a factory in Gujarat to a customer in Bengaluru\u2014including inbound logistics, warehousing, fulfilment, and last-mile delivery\u2014and identify at least two efficiency levers at each stage.",
+    "format": "likert_5",
+    "scale_labels": [
+      "Strongly Disagree",
+      "Disagree",
+      "Neutral",
+      "Agree",
+      "Strongly Agree"
+    ],
+    "primary_competency": {
+      "name": "Supply Chain Management & Logistics",
+      "airtable_id": "recABCDE051"
+    },
+    "secondary_competency": {
+      "name": "Inventory & Demand Planning",
+      "airtable_id": "recABCDE053"
+    },
+    "bucket_weights": {
+      "B08": 1.0,
+      "B13": 0.8
+    },
+    "tier": 2,
+    "scoring_note": "Feeds C51; 0.5\u00d7 to C53. India-specific context makes it culturally authentic."
+  },
+  {
+    "id": "Q38",
+    "section": "competency",
+    "cluster": "CL11",
+    "question": "I have applied process improvement techniques\u2014such as value stream mapping, root cause analysis (5-Whys/fishbone), or Kaizen\u2014to reduce waste or cycle time in a real or simulated process.",
+    "format": "yes_partial_no",
+    "scale_labels": [
+      "Yes, in a live setting (internship/project)",
+      "In an academic simulation or case",
+      "No experience with process improvement tools"
+    ],
+    "primary_competency": {
+      "name": "Process Improvement & Lean/Six Sigma",
+      "airtable_id": "recABCDE052"
+    },
+    "secondary_competency": {
+      "name": "Analytical Thinking & Problem Solving",
+      "airtable_id": "recABCDE003"
+    },
+    "bucket_weights": {
+      "B08": 1.0,
+      "B10": 0.5,
+      "B11": 0.5,
+      "B15": 0.5
+    },
+    "tier": 2,
+    "scoring_note": "'Live setting'=5, 'Academic'=3, 'No'=1. Feeds C52; 0.5\u00d7 to C03."
+  },
+  {
+    "id": "Q39",
+    "section": "competency",
+    "cluster": "CL11",
+    "question": "I have worked with or evaluated enterprise systems like SAP, Oracle, or Salesforce\u2014either in an internship, a systems implementation case, or a certified course.",
+    "format": "yes_partial_no",
+    "scale_labels": [
+      "Yes, hands-on exposure (internship/certification)",
+      "Conceptual knowledge from coursework",
+      "No exposure"
+    ],
+    "primary_competency": {
+      "name": "ERP & Enterprise Tools (SAP, Salesforce, etc.)",
+      "airtable_id": "recABCDE069"
+    },
+    "secondary_competency": {
+      "name": "Tech-Savviness & Digital Tool Fluency",
+      "airtable_id": "recABCDE028"
+    },
+    "bucket_weights": {
+      "B08": 0.8,
+      "B11": 1.0
+    },
+    "tier": 2,
+    "scoring_note": "'Hands-on'=5, 'Conceptual'=3, 'No'=1. Feeds C69; 0.5\u00d7 to C28."
+  },
+  {
+    "id": "Q40",
+    "section": "competency",
+    "cluster": "CL11",
+    "question": "I have managed a project from initiation to closure\u2014defining scope, allocating tasks, tracking milestones, and delivering on time and within constraints\u2014using either Agile sprints or Waterfall planning.",
+    "format": "yes_partial_no",
+    "scale_labels": [
+      "Yes, led an end-to-end project (internship/college/NGO)",
+      "Managed parts of a project",
+      "Participated as a team member only"
+    ],
+    "primary_competency": {
+      "name": "Project Management (Waterfall/Agile)",
+      "airtable_id": "recABCDE055"
+    },
+    "secondary_competency": {
+      "name": "Execution Excellence & Follow-Through",
+      "airtable_id": "recABCDE064"
+    },
+    "bucket_weights": {
+      "B08": 1.0,
+      "B09": 0.8,
+      "B10": 0.5,
+      "B11": 0.8,
+      "B15": 0.5
+    },
+    "tier": 2,
+    "scoring_note": "'End-to-end led'=5, 'Parts'=3, 'Team member'=1. Feeds C55; 0.5\u00d7 to C64."
+  },
+  {
+    "id": "Q41",
+    "section": "competency",
+    "cluster": "CL19",
+    "question": "I consistently follow through on commitments\u2014meeting deadlines, closing open items, and flagging blockers early\u2014even when things get uncomfortable or priorities shift.",
+    "format": "likert_5",
+    "scale_labels": [
+      "Strongly Disagree",
+      "Disagree",
+      "Neutral",
+      "Agree",
+      "Strongly Agree"
+    ],
+    "primary_competency": {
+      "name": "Execution Excellence & Follow-Through",
+      "airtable_id": "recABCDE064"
+    },
+    "secondary_competency": {
+      "name": "Time Management & Prioritisation",
+      "airtable_id": "recABCDE010"
+    },
+    "bucket_weights": {
+      "B01": 0.5,
+      "B08": 0.8,
+      "B09": 0.8,
+      "B10": 1.0,
+      "B13": 0.8
+    },
+    "tier": 1,
+    "scoring_note": "Feeds C64; 0.5\u00d7 to C10. Universal execution orientation competency."
+  },
+  {
+    "id": "Q42",
+    "section": "competency",
+    "cluster": "CL14",
+    "question": "I have defined or critiqued a product roadmap\u2014articulating which features to build first (and why), how to balance short-term user requests vs. long-term strategic bets, and how to communicate trade-offs to stakeholders.",
+    "format": "yes_partial_no",
+    "scale_labels": [
+      "Yes, defined/contributed to a live product roadmap",
+      "Practised in academic/case setting",
+      "No experience with roadmap planning"
+    ],
+    "primary_competency": {
+      "name": "Product Vision & Roadmap Planning",
+      "airtable_id": "recABCDE057"
+    },
+    "secondary_competency": {
+      "name": "Stakeholder Management & Influencing",
+      "airtable_id": "recABCDE008"
+    },
+    "bucket_weights": {
+      "B09": 1.0
+    },
+    "tier": 3,
+    "scoring_note": "'Live roadmap'=5, 'Case setting'=3, 'No'=1. Dedicated PM question; 0.3\u00d7 to C08."
+  },
+  {
+    "id": "Q43",
+    "section": "competency",
+    "cluster": "CL14",
+    "question": "I regularly conduct user interviews, observe user behaviour, or run surveys\u2014not to validate my assumptions, but to genuinely understand what frustrates users and what they're actually trying to accomplish.",
+    "format": "likert_5",
+    "scale_labels": [
+      "Strongly Disagree",
+      "Disagree",
+      "Neutral",
+      "Agree",
+      "Strongly Agree"
+    ],
+    "primary_competency": {
+      "name": "User Research & User Empathy",
+      "airtable_id": "recABCDE058"
+    },
+    "secondary_competency": {
+      "name": "Consumer Behaviour & Market Research",
+      "airtable_id": "recABCDE018"
+    },
+    "bucket_weights": {
+      "B09": 1.0,
+      "B11": 0.5
+    },
+    "tier": 2,
+    "scoring_note": "Feeds C58; 0.5\u00d7 to C18. Strong for PM and BA tracks."
+  },
+  {
+    "id": "Q44",
+    "section": "competency",
+    "cluster": "CL14",
+    "question": "I can define a North Star Metric for a product or business, explain how supporting metrics ladder up to it, and identify which metric to prioritise when they conflict.",
+    "format": "likert_5",
+    "scale_labels": [
+      "Strongly Disagree",
+      "Disagree",
+      "Neutral",
+      "Agree",
+      "Strongly Agree"
+    ],
+    "primary_competency": {
+      "name": "Product Metrics & North Star Framework",
+      "airtable_id": "recABCDE059"
+    },
+    "secondary_competency": {
+      "name": "Research Synthesis & Insight Generation",
+      "airtable_id": "recABCDE042"
+    },
+    "bucket_weights": {
+      "B09": 1.0,
+      "B12": 0.5
+    },
+    "tier": 2,
+    "scoring_note": "Feeds C59; 0.5\u00d7 to C42. Dedicated to PM; partial credit for Analytics."
+  },
+  {
+    "id": "Q45",
+    "section": "competency",
+    "cluster": "CL19",
+    "question": "I am comfortable with ambiguity and failure\u2014I have started something (a venture, club, campaign, or product) that did not work out, learned from it, and tried again.",
+    "format": "yes_partial_no",
+    "scale_labels": [
+      "Yes, started something that failed and tried again",
+      "Started something but never experienced failure",
+      "Haven't started something independently yet"
+    ],
+    "primary_competency": {
+      "name": "Entrepreneurial Mindset & Risk Tolerance",
+      "airtable_id": "recABCDE009"
+    },
+    "secondary_competency": {
+      "name": "Adaptability & Learning Agility",
+      "airtable_id": "recABCDE006"
+    },
+    "bucket_weights": {
+      "B01": 0.5,
+      "B03": 0.8,
+      "B09": 0.8,
+      "B10": 1.0,
+      "B13": 0.8
+    },
+    "tier": 2,
+    "scoring_note": "'Failed and tried again'=5, 'Started, no failure'=3, 'Haven't started'=1. Feeds C09; 0.5\u00d7 to C06."
+  },
+  {
+    "id": "Q46",
+    "section": "competency",
+    "cluster": "CL13",
+    "question": "I have designed or evaluated a business model\u2014articulating revenue streams, cost structure, customer segments, and the value proposition on a Business Model Canvas or equivalent framework.",
+    "format": "yes_partial_no",
+    "scale_labels": [
+      "Yes, for a live venture or serious project",
+      "Yes, in a business plan competition or classroom",
+      "No experience with business model design"
+    ],
+    "primary_competency": {
+      "name": "Business Model Design & Innovation",
+      "airtable_id": "recABCDE063"
+    },
+    "secondary_competency": {
+      "name": "Market Sizing & Go-To-Market Strategy",
+      "airtable_id": "recABCDE021"
+    },
+    "bucket_weights": {
+      "B09": 0.8,
+      "B10": 1.0
+    },
+    "tier": 2,
+    "scoring_note": "'Live venture'=5, 'Competition'=3, 'No'=1. Feeds C63; 0.5\u00d7 to C21."
+  },
+  {
+    "id": "Q47",
+    "section": "competency",
+    "cluster": "CL05",
+    "question": "I have gathered requirements from business users, translated them into structured documents (user stories, BRDs, process flows), and validated them with stakeholders before handing off to a technical team.",
+    "format": "yes_partial_no",
+    "scale_labels": [
+      "Yes, in a BA or consulting internship/project",
+      "Done partially or in an academic setting",
+      "No experience with requirements documentation"
+    ],
+    "primary_competency": {
+      "name": "Requirements Gathering & Documentation (BRD/FRD)",
+      "airtable_id": "recABCDE066"
+    },
+    "secondary_competency": {
+      "name": "Process Mapping & Workflow Analysis",
+      "airtable_id": "recABCDE068"
+    },
+    "bucket_weights": {
+      "B11": 1.0
+    },
+    "tier": 3,
+    "scoring_note": "'BA/Consulting internship'=5, 'Academic'=3, 'No'=1. Dedicated to BA/IT; double-scores C66 + C68."
+  },
+  {
+    "id": "Q48",
+    "section": "competency",
+    "cluster": "CL05",
+    "question": "I can think in systems\u2014understanding how a change in one part of a business (e.g., a new IT module, a policy change) will cascade through workflows, data flows, and people processes elsewhere.",
+    "format": "likert_5",
+    "scale_labels": [
+      "Strongly Disagree",
+      "Disagree",
+      "Neutral",
+      "Agree",
+      "Strongly Agree"
+    ],
+    "primary_competency": {
+      "name": "Systems Thinking & IT Architecture Awareness",
+      "airtable_id": "recABCDE067"
+    },
+    "secondary_competency": {
+      "name": "Analytical Thinking & Problem Solving",
+      "airtable_id": "recABCDE003"
+    },
+    "bucket_weights": {
+      "B08": 0.5,
+      "B11": 1.0,
+      "B12": 0.5
+    },
+    "tier": 2,
+    "scoring_note": "Feeds C67; 0.5\u00d7 to C03. Strong for BA/IT and Analytics."
+  },
+  {
+    "id": "Q49",
+    "section": "competency",
+    "cluster": "CL20",
+    "question": "I have faced a situation where the financially optimal decision conflicted with what I felt was the ethical choice\u2014and I chose the ethical path, even at a personal cost.",
+    "format": "yes_partial_no",
+    "scale_labels": [
+      "Yes, and I took the ethical path despite the cost",
+      "Yes, but I rationalised the financial decision",
+      "No, haven't faced such a clear conflict"
+    ],
+    "primary_competency": {
+      "name": "Corporate Governance & Ethics",
+      "airtable_id": "recABCDE065"
+    },
+    "secondary_competency": {
+      "name": "Values-Driven Decision Making & Social Sensitivity",
+      "airtable_id": "recABCDE093"
+    },
+    "bucket_weights": {
+      "B10": 0.5,
+      "B14": 0.5,
+      "B16": 1.0
+    },
+    "tier": 2,
+    "scoring_note": "'Ethical path despite cost'=5, 'Rationalised financial'=2, 'No conflict'=3 (neutral). Feeds C65; 0.5\u00d7 to C93."
+  },
+  {
+    "id": "Q50",
+    "section": "competency",
+    "cluster": "CL01",
+    "question": "I proactively build and maintain professional relationships\u2014reaching out to alumni, mentors, or industry professionals even when I don't need anything immediately\u2014and regularly offer value to my network.",
+    "format": "likert_5",
+    "scale_labels": [
+      "Strongly Disagree",
+      "Disagree",
+      "Neutral",
+      "Agree",
+      "Strongly Agree"
+    ],
+    "primary_competency": {
+      "name": "Networking & Relationship Building",
+      "airtable_id": "recABCDE095"
+    },
+    "secondary_competency": {
+      "name": "Client Relationship Management (CRM)",
+      "airtable_id": "recABCDE012"
+    },
+    "bucket_weights": {
+      "B01": 0.8,
+      "B04": 0.5,
+      "B06": 0.5,
+      "B07": 0.5,
+      "B10": 0.5,
+      "B14": 0.8,
+      "B16": 0.5
+    },
+    "tier": 2,
+    "scoring_note": "Feeds C95; 0.5\u00d7 to C12. Sales, BFSI, and IB particularly benefit from strong networkers."
+  },
+  {
+    "id": "Q51",
+    "section": "competency",
+    "cluster": "CL18",
+    "question": "I understand how credit decisions are made\u2014including the 5Cs of credit (Character, Capacity, Capital, Collateral, Conditions)\u2014and can evaluate the creditworthiness of a borrower from a set of financial data.",
+    "format": "yes_partial_no",
+    "scale_labels": [
+      "Yes, can apply credit analysis to a real case",
+      "Conceptual understanding from coursework",
+      "Not familiar with credit analysis"
+    ],
+    "primary_competency": {
+      "name": "Credit Analysis & Underwriting",
+      "airtable_id": "recABCDE081"
+    },
+    "secondary_competency": {
+      "name": "Financial Statement Analysis (FSA)",
+      "airtable_id": "recABCDE031"
+    },
+    "bucket_weights": {
+      "B14": 1.0
+    },
+    "tier": 3,
+    "scoring_note": "'Can apply'=5, 'Conceptual'=3, 'Unfamiliar'=1. Dedicated to BFSI; double-scores C81 + C31."
+  },
+  {
+    "id": "Q52",
+    "section": "competency",
+    "cluster": "CL18",
+    "question": "I am aware of the roles and mandates of RBI, SEBI, and IRDAI in India's financial system\u2014and can explain how a recent regulatory change by one of them affects lending, markets, or insurance products.",
+    "format": "yes_partial_no",
+    "scale_labels": [
+      "Yes, aware of current regulatory changes and their impact",
+      "Basic knowledge of roles but not current changes",
+      "Not familiar with these regulators"
+    ],
+    "primary_competency": {
+      "name": "Regulatory Compliance (RBI, SEBI, IRDAI)",
+      "airtable_id": "recABCDE082"
+    },
+    "secondary_competency": {
+      "name": "Risk Management & Compliance",
+      "airtable_id": "recABCDE033"
+    },
+    "bucket_weights": {
+      "B04": 0.5,
+      "B14": 1.0
+    },
+    "tier": 3,
+    "scoring_note": "'Current changes'=5, 'Basic knowledge'=3, 'Unfamiliar'=1. Feeds C82; 0.5\u00d7 to C33."
+  },
+  {
+    "id": "Q53",
+    "section": "competency",
+    "cluster": "CL16",
+    "question": "I understand how India's healthcare system is structured\u2014public vs. private, AYUSHMAN Bharat, NABH accreditation, and the role of pharma in patient outcomes\u2014and can identify business opportunities within it.",
+    "format": "yes_partial_no",
+    "scale_labels": [
+      "Yes, have a detailed understanding and can identify opportunities",
+      "Basic understanding of the structure",
+      "Limited knowledge of India's healthcare system"
+    ],
+    "primary_competency": {
+      "name": "Healthcare System Understanding (India)",
+      "airtable_id": "recABCDE085"
+    },
+    "secondary_competency": {
+      "name": "Analytical Thinking & Problem Solving",
+      "airtable_id": "recABCDE003"
+    },
+    "bucket_weights": {
+      "B15": 1.0
+    },
+    "tier": 3,
+    "scoring_note": "'Detailed + opportunities'=5, 'Basic'=3, 'Limited'=1. Dedicated to Healthcare bucket; double-scores C85 + C03."
+  },
+  {
+    "id": "Q54",
+    "section": "competency",
+    "cluster": "CL16",
+    "question": "I understand the drug approval pathway in India (CDSCO, Clinical Trials Registry, Phase I-III trials) and can explain why regulatory compliance is a strategic, not just legal, priority for pharma companies.",
+    "format": "yes_partial_no",
+    "scale_labels": [
+      "Yes, detailed understanding",
+      "Basic conceptual awareness",
+      "Not familiar with pharma regulatory processes"
+    ],
+    "primary_competency": {
+      "name": "Clinical Trial & Regulatory (CDSCO/FDA awareness)",
+      "airtable_id": "recABCDE087"
+    },
+    "secondary_competency": {
+      "name": "Risk Management & Compliance",
+      "airtable_id": "recABCDE033"
+    },
+    "bucket_weights": {
+      "B15": 1.0
+    },
+    "tier": 3,
+    "scoring_note": "'Detailed'=5, 'Basic'=3, 'Unfamiliar'=1. Dedicated to Healthcare; double-scores C87 + C33."
+  },
+  {
+    "id": "Q55",
+    "section": "competency",
+    "cluster": "CL17",
+    "question": "I understand the mechanics of an e-commerce marketplace\u2014including how seller ratings, Buy Box algorithms, inventory placement, and sponsored ads affect visibility and sales rank on platforms like Amazon, Flipkart, or Meesho.",
+    "format": "yes_partial_no",
+    "scale_labels": [
+      "Yes, have worked with marketplace operations (internship/seller account)",
+      "Conceptual understanding from study/observation",
+      "Not familiar with marketplace mechanics"
+    ],
+    "primary_competency": {
+      "name": "E-Commerce Marketplace Operations",
+      "airtable_id": "recABCDE078"
+    },
+    "secondary_competency": {
+      "name": "Digital Sales & Social Selling",
+      "airtable_id": "recABCDE015"
+    },
+    "bucket_weights": {
+      "B13": 1.0
+    },
+    "tier": 3,
+    "scoring_note": "'Worked with'=5, 'Conceptual'=3, 'Unfamiliar'=1. Dedicated to E-Commerce; double-scores C78 + C15."
+  },
+  {
+    "id": "Q56",
+    "section": "competency",
+    "cluster": "CL17",
+    "question": "I have managed or analysed a product category\u2014including deciding assortment width, identifying top/bottom performers, setting promotional calendars, and planning stock replenishment for a retail or online context.",
+    "format": "yes_partial_no",
+    "scale_labels": [
+      "Yes, managed a category (internship/project)",
+      "Analysed in academic/case setting",
+      "No experience with category management"
+    ],
+    "primary_competency": {
+      "name": "Category Management & Merchandising",
+      "airtable_id": "recABCDE077"
+    },
+    "secondary_competency": {
+      "name": "Supply Chain Management & Logistics",
+      "airtable_id": "recABCDE051"
+    },
+    "bucket_weights": {
+      "B13": 1.0,
+      "B08": 0.3
+    },
+    "tier": 3,
+    "scoring_note": "'Live category management'=5, 'Academic'=3, 'No'=1. Feeds C77; 0.3\u00d7 to C51."
+  },
+  {
+    "id": "Q57",
+    "section": "competency",
+    "cluster": "CL15",
+    "question": "I can analyse a public policy\u2014such as MGNREGA, PLI Scheme, or National Health Mission\u2014by evaluating its stated objectives, implementation mechanism, stakeholder incentives, and measurable outcomes, and suggest one improvement.",
+    "format": "yes_partial_no",
+    "scale_labels": [
+      "Yes, done policy analysis in a research project, NGO, or competition",
+      "Can do conceptually but haven't formally written one",
+      "Not familiar with policy analysis frameworks"
+    ],
+    "primary_competency": {
+      "name": "Policy Analysis & Government Interface",
+      "airtable_id": "recABCDE089"
+    },
+    "secondary_competency": {
+      "name": "Structured Thinking & First-Principles Reasoning",
+      "airtable_id": "recABCDE007"
+    },
+    "bucket_weights": {
+      "B16": 1.0
+    },
+    "tier": 3,
+    "scoring_note": "'Formal analysis'=5, 'Conceptual'=3, 'Unfamiliar'=1. Dedicated to Social Impact; double-scores C89 + C07."
+  },
+  {
+    "id": "Q58",
+    "section": "competency",
+    "cluster": "CL15",
+    "question": "I have worked with communities at the grassroots level\u2014conducting surveys, facilitating focus groups, or co-designing solutions with beneficiaries\u2014rather than designing programs from a desk.",
+    "format": "yes_partial_no",
+    "scale_labels": [
+      "Yes, through an NGO, SHG, or development project",
+      "Yes, through a college NSS/social initiative",
+      "No grassroots exposure"
+    ],
+    "primary_competency": {
+      "name": "Community Engagement & Participatory Methods",
+      "airtable_id": "recABCDE092"
+    },
+    "secondary_competency": {
+      "name": "Social Impact Measurement (SROI, Theory of Change)",
+      "airtable_id": "recABCDE090"
+    },
+    "bucket_weights": {
+      "B16": 1.0
+    },
+    "tier": 3,
+    "scoring_note": "'NGO/Development project'=5, 'NSS/College'=3, 'No'=1. Feeds C92; 0.5\u00d7 to C90."
+  },
+  {
+    "id": "Q59",
+    "section": "competency",
+    "cluster": "CL15",
+    "question": "I have read or applied a Theory of Change, Logic Model, or SROI framework to evaluate whether a social programme is achieving its intended impact.",
+    "format": "yes_partial_no",
+    "scale_labels": [
+      "Yes, applied in a project or research",
+      "Familiar conceptually",
+      "Not familiar with these frameworks"
+    ],
+    "primary_competency": {
+      "name": "Social Impact Measurement (SROI, Theory of Change)",
+      "airtable_id": "recABCDE090"
+    },
+    "secondary_competency": {
+      "name": "Research Synthesis & Insight Generation",
+      "airtable_id": "recABCDE042"
+    },
+    "bucket_weights": {
+      "B16": 1.0
+    },
+    "tier": 3,
+    "scoring_note": "'Applied'=5, 'Conceptual'=3, 'Unfamiliar'=1. Feeds C90; 0.5\u00d7 to C42."
+  },
+  {
+    "id": "Q60",
+    "section": "competency",
+    "cluster": "CL06",
+    "question": "I have delivered a high-stakes presentation\u2014to faculty, judges, senior professionals, or clients\u2014where the visual design, narrative flow, and data evidence together drove the audience to a clear decision or action.",
+    "format": "yes_partial_no",
+    "scale_labels": [
+      "Yes, in a competition, internship, or client setting",
+      "Yes, in a classroom or college event",
+      "No high-stakes presentation experience"
+    ],
+    "primary_competency": {
+      "name": "Presentation Design & Data Storytelling",
+      "airtable_id": "recABCDE094"
+    },
+    "secondary_competency": {
+      "name": "Written Communication & Business Writing",
+      "airtable_id": "recABCDE002"
+    },
+    "bucket_weights": {
+      "B02": 0.5,
+      "B06": 0.8,
+      "B09": 0.5,
+      "B10": 0.5,
+      "B12": 0.8
+    },
+    "tier": 2,
+    "scoring_note": "'Competition/Client'=5, 'Classroom'=3, 'No'=1. Feeds C94; 0.3\u00d7 to C02."
+  },
+  {
+    "id": "Q61",
+    "section": "competency",
+    "cluster": "CL03",
+    "question": "When facing incomplete information or a tight deadline, I am able to make a confident decision\u2014committing to a direction, communicating the rationale, and adjusting as new data arrives.",
+    "format": "likert_5",
+    "scale_labels": [
+      "Strongly Disagree",
+      "Disagree",
+      "Neutral",
+      "Agree",
+      "Strongly Agree"
+    ],
+    "primary_competency": {
+      "name": "Decision-Making Under Ambiguity",
+      "airtable_id": "recABCDE056"
+    },
+    "secondary_competency": {
+      "name": "Entrepreneurial Mindset & Risk Tolerance",
+      "airtable_id": "recABCDE009"
+    },
+    "bucket_weights": {
+      "B06": 0.8,
+      "B08": 0.8,
+      "B09": 1.0,
+      "B10": 1.0,
+      "B12": 0.5
+    },
+    "tier": 2,
+    "scoring_note": "Feeds C56; 0.5\u00d7 to C09. Strong discriminator for PM, GM, Consulting, Operations."
+  },
+  {
+    "id": "Q62",
+    "section": "competency",
+    "cluster": "CL12",
+    "question": "I have built or reviewed a budget\u2014whether for a project, college fest, or business unit\u2014identifying major cost drivers, setting targets, and tracking actuals vs. plan on a periodic basis.",
+    "format": "yes_partial_no",
+    "scale_labels": [
+      "Yes, built and managed a live budget",
+      "Built a budget for academic/case purposes",
+      "No budgeting experience"
+    ],
+    "primary_competency": {
+      "name": "Budgeting & Forecasting",
+      "airtable_id": "recABCDE036"
+    },
+    "secondary_competency": {
+      "name": "Cost Management & Variance Analysis",
+      "airtable_id": "recABCDE037"
+    },
+    "bucket_weights": {
+      "B05": 1.0,
+      "B08": 0.5,
+      "B10": 0.8
+    },
+    "tier": 2,
+    "scoring_note": "'Live budget'=5, 'Academic'=3, 'No'=1. Feeds C36; 0.5\u00d7 to C37. Primarily for FP&A and GM."
+  },
+  {
+    "id": "Q63",
+    "section": "competency",
+    "cluster": "CL12",
+    "question": "I understand how to identify, assess, and mitigate key business risks\u2014whether financial, operational, or reputational\u2014and have contributed to a risk register or contingency plan.",
+    "format": "yes_partial_no",
+    "scale_labels": [
+      "Yes, contributed to a formal risk assessment",
+      "Understand risk frameworks conceptually",
+      "No exposure to risk management"
+    ],
+    "primary_competency": {
+      "name": "Risk Management & Compliance",
+      "airtable_id": "recABCDE033"
+    },
+    "secondary_competency": {
+      "name": "Analytical Thinking & Problem Solving",
+      "airtable_id": "recABCDE003"
+    },
+    "bucket_weights": {
+      "B04": 0.8,
+      "B05": 0.8,
+      "B08": 0.5,
+      "B14": 0.8,
+      "B15": 0.5
+    },
+    "tier": 2,
+    "scoring_note": "'Formal assessment'=5, 'Conceptual'=3, 'No'=1. Feeds C33; 0.5\u00d7 to C03."
+  },
+  {
+    "id": "Q64",
+    "section": "competency",
+    "cluster": "CL10",
+    "question": "I am drawn to understanding what motivates people at work\u2014why some teams are highly engaged while others are not\u2014and I have ideas about how to design roles, incentives, or culture to improve this.",
+    "format": "likert_5",
+    "scale_labels": [
+      "Strongly Disagree",
+      "Disagree",
+      "Neutral",
+      "Agree",
+      "Strongly Agree"
+    ],
+    "primary_competency": {
+      "name": "Employee Engagement & Retention",
+      "airtable_id": "recABCDE048"
+    },
+    "secondary_competency": {
+      "name": "Organisational Behaviour & Culture Building",
+      "airtable_id": "recABCDE047"
+    },
+    "bucket_weights": {
+      "B07": 1.0,
+      "B10": 0.5
+    },
+    "tier": 2,
+    "scoring_note": "Feeds C48; 0.5\u00d7 to C47. Strong discriminator for HR; moderate for GM."
+  },
+  {
+    "id": "Q65",
+    "section": "competency",
+    "cluster": "CL16",
+    "question": "I understand how a pharmaceutical company markets its products to doctors (prescription ethics, MR roles, KOL management) and how this differs from OTC/consumer health marketing.",
+    "format": "yes_partial_no",
+    "scale_labels": [
+      "Yes, studied/worked in pharma marketing or medical affairs",
+      "Conceptual understanding from courses/reading",
+      "Not familiar with pharma marketing practices"
+    ],
+    "primary_competency": {
+      "name": "Pharma Marketing & Medical Affairs",
+      "airtable_id": "recABCDE086"
+    },
+    "secondary_competency": {
+      "name": "Consumer Behaviour & Market Research",
+      "airtable_id": "recABCDE018"
+    },
+    "bucket_weights": {
+      "B15": 1.0
+    },
+    "tier": 3,
+    "scoring_note": "'Worked in pharma'=5, 'Conceptual'=3, 'Unfamiliar'=1. Dedicated Healthcare; double-scores C86 + C18."
+  },
+  {
+    "id": "Q66",
+    "section": "competency",
+    "cluster": "CL03",
+    "question": "I have participated in college fests, placements, or extracurriculars in a role where I was the 'bridge' between two or more groups with different goals\u2014ensuring alignment without direct authority over either side.",
+    "format": "yes_partial_no",
+    "scale_labels": [
+      "Yes, in a formal coordinator/liaison role",
+      "Yes, informally",
+      "No, haven't played this kind of role"
+    ],
+    "primary_competency": {
+      "name": "Cross-Functional Team Leadership",
+      "airtable_id": "recABCDE060"
+    },
+    "secondary_competency": {
+      "name": "Stakeholder Management & Influencing",
+      "airtable_id": "recABCDE008"
+    },
+    "bucket_weights": {
+      "B09": 0.8,
+      "B10": 0.5,
+      "B11": 0.5
+    },
+    "tier": 2,
+    "scoring_note": "'Formal coordinator'=5, 'Informal'=3, 'No'=1. Feeds C60; 0.5\u00d7 to C08."
+  },
+  {
+    "id": "Q67",
+    "section": "competency",
+    "cluster": "CL07",
+    "question": "I have conducted structured primary research\u2014through surveys, interviews, or ethnographic observation\u2014and used the findings to make a business recommendation that differed from my initial hypothesis.",
+    "format": "yes_partial_no",
+    "scale_labels": [
+      "Yes, led primary research with documented findings",
+      "Participated in research but didn't lead it",
+      "No primary research experience"
+    ],
+    "primary_competency": {
+      "name": "Consumer Behaviour & Market Research",
+      "airtable_id": "recABCDE018"
+    },
+    "secondary_competency": {
+      "name": "Research Synthesis & Insight Generation",
+      "airtable_id": "recABCDE042"
+    },
+    "bucket_weights": {
+      "B02": 0.8,
+      "B06": 0.5,
+      "B09": 0.5,
+      "B12": 0.3,
+      "B15": 0.5,
+      "B16": 0.5
+    },
+    "tier": 2,
+    "scoring_note": "'Led research'=5, 'Participated'=3, 'No'=1. Feeds C18; 0.5\u00d7 to C42."
+  },
+  {
+    "id": "Q68",
+    "section": "competency",
+    "cluster": "CL08",
+    "question": "I have managed or supported a key account or client relationship\u2014understanding their business needs deeply, proactively sharing relevant updates, and expanding the relationship beyond the initial scope.",
+    "format": "yes_partial_no",
+    "scale_labels": [
+      "Yes, managed accounts in an internship or project",
+      "Supported someone managing accounts",
+      "No client-facing relationship experience"
+    ],
+    "primary_competency": {
+      "name": "Client Relationship Management (CRM)",
+      "airtable_id": "recABCDE012"
+    },
+    "secondary_competency": {
+      "name": "Networking & Relationship Building",
+      "airtable_id": "recABCDE095"
+    },
+    "bucket_weights": {
+      "B01": 0.8,
+      "B02": 0.5,
+      "B13": 0.8,
+      "B14": 0.8,
+      "B15": 0.5
+    },
+    "tier": 2,
+    "scoring_note": "'Managed accounts'=5, 'Supported'=3, 'No'=1. Feeds C12; 0.5\u00d7 to C95."
+  },
+  {
+    "id": "Q69",
+    "section": "competency",
+    "cluster": "CL19",
+    "question": "I proactively upskill myself\u2014completing certifications, attending industry events, or doing self-study in emerging areas (AI tools, new regulations, market trends)\u2014without being asked or incentivised.",
+    "format": "likert_5",
+    "scale_labels": [
+      "Strongly Disagree",
+      "Disagree",
+      "Neutral",
+      "Agree",
+      "Strongly Agree"
+    ],
+    "primary_competency": {
+      "name": "Adaptability & Learning Agility",
+      "airtable_id": "recABCDE006"
+    },
+    "secondary_competency": {
+      "name": "Entrepreneurial Mindset & Risk Tolerance",
+      "airtable_id": "recABCDE009"
+    },
+    "bucket_weights": {
+      "B03": 0.5,
+      "B06": 0.3,
+      "B09": 0.5,
+      "B10": 0.5,
+      "B11": 0.5,
+      "B12": 0.5,
+      "B13": 0.3
+    },
+    "tier": 1,
+    "scoring_note": "Second question on C06 with emphasis on proactive learning vs. reactive adaptation. Adds additional variance to adaptability scoring."
+  },
+  {
+    "id": "Q70",
+    "section": "competency",
+    "cluster": "CL20",
+    "question": "I believe businesses have a responsibility beyond profit\u2014to their employees, communities, and the environment\u2014and I actively seek roles or employers that embed this responsibility into their strategy.",
+    "format": "likert_5",
+    "scale_labels": [
+      "Strongly Disagree",
+      "Disagree",
+      "Neutral",
+      "Agree",
+      "Strongly Agree"
+    ],
+    "primary_competency": {
+      "name": "Values-Driven Decision Making & Social Sensitivity",
+      "airtable_id": "recABCDE093"
+    },
+    "secondary_competency": {
+      "name": "Corporate Governance & Ethics",
+      "airtable_id": "recABCDE065"
+    },
+    "bucket_weights": {
+      "B07": 0.5,
+      "B10": 0.3,
+      "B14": 0.3,
+      "B16": 1.0
+    },
+    "tier": 2,
+    "scoring_note": "Feeds C93; 0.5\u00d7 to C65. Key discriminator for Social Impact vs. Finance/Sales orientations."
+  },
+  {
+    "id": "Q71",
+    "section": "interest",
+    "question": "If you had to spend a full workday, which of these activities would you most prefer?",
+    "format": "single_choice",
+    "options": [
+      "A: Pitching to a client and negotiating a deal",
+      "B: Running a data analysis to find patterns in customer behaviour",
+      "C: Designing a product feature from user interviews",
+      "D: Building a financial model to value a company"
+    ],
+    "bucket_weights": {
+      "A": {
+        "B01": 1.0,
+        "B14": 0.8
+      },
+      "B": {
+        "B12": 1.0,
+        "B03": 0.5
+      },
+      "C": {
+        "B09": 1.0,
+        "B11": 0.5
+      },
+      "D": {
+        "B04": 1.0,
+        "B05": 0.8
+      }
+    },
+    "scoring_note": "Interest signal. Selected option adds 0.5 to the corresponding bucket's interest_score."
+  },
+  {
+    "id": "Q72",
+    "section": "interest",
+    "question": "Which of these environments excites you most for your first job?",
+    "format": "single_choice",
+    "options": [
+      "A: A startup where you own multiple functions and build from scratch",
+      "B: A large FMCG company managing brands and campaigns",
+      "C: A consulting firm solving strategy problems across industries",
+      "D: An NGO or government body working on social policy"
+    ],
+    "bucket_weights": {
+      "A": {
+        "B10": 1.0,
+        "B09": 0.5
+      },
+      "B": {
+        "B02": 1.0,
+        "B03": 0.5
+      },
+      "C": {
+        "B06": 1.0,
+        "B04": 0.5
+      },
+      "D": {
+        "B16": 1.0,
+        "B07": 0.3
+      }
+    },
+    "scoring_note": "Environment preference strongly predicts role fit. Each choice adds 0.5 to corresponding buckets."
+  },
+  {
+    "id": "Q73",
+    "section": "interest",
+    "question": "When you read business news, which section do you instinctively read first?",
+    "format": "single_choice",
+    "options": [
+      "A: Markets, IPOs, and corporate earnings",
+      "B: Supply chain disruptions and manufacturing",
+      "C: Product launches and consumer trends",
+      "D: Social sector and public policy developments"
+    ],
+    "bucket_weights": {
+      "A": {
+        "B04": 1.0,
+        "B14": 0.8
+      },
+      "B": {
+        "B08": 1.0,
+        "B13": 0.5
+      },
+      "C": {
+        "B02": 1.0,
+        "B13": 0.5
+      },
+      "D": {
+        "B16": 1.0,
+        "B07": 0.3
+      }
+    },
+    "scoring_note": "Reading habits indicate genuine interest orientation. Low stakes but reliable interest signal."
+  },
+  {
+    "id": "Q74",
+    "section": "interest",
+    "question": "Which of these describes your ideal career success in 10 years?",
+    "format": "single_choice",
+    "options": [
+      "A: Leading a large sales team and driving market expansion for a company",
+      "B: Being a sought-after expert in data/analytics who advises business decisions",
+      "C: Running my own company or leading a business unit with full P&L ownership",
+      "D: Building systems and processes that make an entire organisation more efficient"
+    ],
+    "bucket_weights": {
+      "A": {
+        "B01": 1.0,
+        "B14": 0.5
+      },
+      "B": {
+        "B12": 1.0,
+        "B05": 0.5
+      },
+      "C": {
+        "B10": 1.0,
+        "B09": 0.5
+      },
+      "D": {
+        "B08": 1.0,
+        "B11": 0.5
+      }
+    },
+    "scoring_note": "Long-term aspiration is a strong predictor of intrinsic motivation alignment."
+  },
+  {
+    "id": "Q75",
+    "section": "interest",
+    "question": "When you encounter a frustrated customer/user, what's your first instinct?",
+    "format": "single_choice",
+    "options": [
+      "A: Understand the root cause of their frustration and fix the underlying process",
+      "B: Empathise, resolve it personally, and use it to improve the product",
+      "C: Analyse how many others have the same issue and quantify the business impact",
+      "D: Figure out how to communicate better to prevent this frustration in future"
+    ],
+    "bucket_weights": {
+      "A": {
+        "B08": 1.0,
+        "B11": 0.5
+      },
+      "B": {
+        "B09": 1.0,
+        "B07": 0.5
+      },
+      "C": {
+        "B12": 1.0,
+        "B05": 0.5
+      },
+      "D": {
+        "B07": 1.0,
+        "B02": 0.5
+      }
+    },
+    "scoring_note": "Reveals instinctive problem-solving style \u2014 process vs. people vs. data vs. communication orientation."
+  },
+  {
+    "id": "Q76",
+    "section": "interest",
+    "question": "Which of these would you volunteer for in your MBA committee or club?",
+    "format": "single_choice",
+    "options": [
+      "A: Finance & Investment Club \u2014 modelling and analysing companies",
+      "B: Marketing Committee \u2014 running brand campaigns and events",
+      "C: HR Committee \u2014 managing placements and student welfare",
+      "D: Operations Club \u2014 optimising logistics for college events"
+    ],
+    "bucket_weights": {
+      "A": {
+        "B04": 1.0,
+        "B05": 0.8
+      },
+      "B": {
+        "B02": 1.0,
+        "B03": 0.5
+      },
+      "C": {
+        "B07": 1.0,
+        "B16": 0.3
+      },
+      "D": {
+        "B08": 1.0,
+        "B13": 0.5
+      }
+    },
+    "scoring_note": "Revealed preference through past behaviour is a stronger predictor than stated preference."
+  },
+  {
+    "id": "Q77",
+    "section": "interest",
+    "question": "You have one free evening and internet access. You would most likely:",
+    "format": "single_choice",
+    "options": [
+      "A: Build a side project or prototype a product idea",
+      "B: Read analyst reports and do stock research",
+      "C: Write a blog post or create content about something you know",
+      "D: Map out a business plan or market entry strategy for an idea"
+    ],
+    "bucket_weights": {
+      "A": {
+        "B09": 1.0,
+        "B11": 0.5
+      },
+      "B": {
+        "B04": 1.0,
+        "B14": 0.5
+      },
+      "C": {
+        "B02": 0.8,
+        "B16": 0.8
+      },
+      "D": {
+        "B10": 1.0,
+        "B06": 0.5
+      }
+    },
+    "scoring_note": "Unstructured preference reveals underlying motivation and intrinsic interest."
+  },
+  {
+    "id": "Q78",
+    "section": "interest",
+    "question": "If you had to pick a sector to work in for the next 5 years, which one calls to you most?",
+    "format": "single_choice",
+    "options": [
+      "A: Healthcare and life sciences",
+      "B: Banking, financial services, and insurance",
+      "C: E-commerce, retail, and consumer brands",
+      "D: Technology, SaaS, and digital products"
+    ],
+    "bucket_weights": {
+      "A": {
+        "B15": 1.0,
+        "B16": 0.3
+      },
+      "B": {
+        "B14": 1.0,
+        "B04": 0.5
+      },
+      "C": {
+        "B13": 1.0,
+        "B02": 0.5
+      },
+      "D": {
+        "B09": 0.8,
+        "B11": 0.5,
+        "B03": 0.5
+      }
+    },
+    "scoring_note": "Sector preference directly boosts domain-specific bucket scores. Disambiguates between B15/B14/B13 which may overlap on competency questions."
+  }
+];
+
+const COMPETENCIES = [
+  {
+    "id": "C01",
+    "airtable_id": "recABCDE001",
+    "name": "Communication (Verbal & Presentation)",
+    "type": "soft",
+    "buckets": [
+      "B01",
+      "B02",
+      "B03",
+      "B06",
+      "B07",
+      "B08",
+      "B09",
+      "B10",
+      "B13",
+      "B14",
+      "B15",
+      "B16"
+    ],
+    "priority": {
+      "B01": "HIGH",
+      "B02": "HIGH",
+      "B03": "MEDIUM",
+      "B06": "HIGH",
+      "B07": "HIGH",
+      "B08": "MEDIUM",
+      "B09": "HIGH",
+      "B10": "HIGH",
+      "B13": "MEDIUM",
+      "B14": "HIGH",
+      "B15": "MEDIUM",
+      "B16": "HIGH"
+    },
+    "tier": 1,
+    "bucket_count": 12
+  },
+  {
+    "id": "C02",
+    "airtable_id": "recABCDE002",
+    "name": "Written Communication & Business Writing",
+    "type": "soft",
+    "buckets": [
+      "B01",
+      "B02",
+      "B06",
+      "B07",
+      "B09",
+      "B10",
+      "B11",
+      "B16"
+    ],
+    "priority": {
+      "B01": "MEDIUM",
+      "B02": "HIGH",
+      "B06": "HIGH",
+      "B07": "MEDIUM",
+      "B09": "HIGH",
+      "B10": "MEDIUM",
+      "B11": "MEDIUM",
+      "B16": "HIGH"
+    },
+    "tier": 1,
+    "bucket_count": 8
+  },
+  {
+    "id": "C03",
+    "airtable_id": "recABCDE003",
+    "name": "Analytical Thinking & Problem Solving",
+    "type": "soft",
+    "buckets": [
+      "B04",
+      "B05",
+      "B06",
+      "B08",
+      "B09",
+      "B10",
+      "B11",
+      "B12",
+      "B14",
+      "B15",
+      "B16"
+    ],
+    "priority": {
+      "B04": "HIGH",
+      "B05": "HIGH",
+      "B06": "HIGH",
+      "B08": "HIGH",
+      "B09": "HIGH",
+      "B10": "HIGH",
+      "B11": "HIGH",
+      "B12": "HIGH",
+      "B14": "MEDIUM",
+      "B15": "HIGH",
+      "B16": "HIGH"
+    },
+    "tier": 1,
+    "bucket_count": 11
+  },
+  {
+    "id": "C04",
+    "airtable_id": "recABCDE004",
+    "name": "Leadership & People Management",
+    "type": "soft",
+    "buckets": [
+      "B01",
+      "B06",
+      "B07",
+      "B08",
+      "B09",
+      "B10",
+      "B13",
+      "B14",
+      "B15"
+    ],
+    "priority": {
+      "B01": "HIGH",
+      "B06": "HIGH",
+      "B07": "HIGH",
+      "B08": "HIGH",
+      "B09": "HIGH",
+      "B10": "HIGH",
+      "B13": "HIGH",
+      "B14": "HIGH",
+      "B15": "MEDIUM"
+    },
+    "tier": 1,
+    "bucket_count": 9
+  },
+  {
+    "id": "C05",
+    "airtable_id": "recABCDE005",
+    "name": "Teamwork & Collaboration",
+    "type": "soft",
+    "buckets": [
+      "B02",
+      "B06",
+      "B07",
+      "B08",
+      "B09",
+      "B10",
+      "B11",
+      "B15",
+      "B16"
+    ],
+    "priority": {
+      "B02": "MEDIUM",
+      "B06": "HIGH",
+      "B07": "HIGH",
+      "B08": "HIGH",
+      "B09": "MEDIUM",
+      "B10": "HIGH",
+      "B11": "MEDIUM",
+      "B15": "MEDIUM",
+      "B16": "HIGH"
+    },
+    "tier": 1,
+    "bucket_count": 9
+  },
+  {
+    "id": "C06",
+    "airtable_id": "recABCDE006",
+    "name": "Adaptability & Learning Agility",
+    "type": "soft",
+    "buckets": [
+      "B01",
+      "B03",
+      "B09",
+      "B10",
+      "B11",
+      "B12",
+      "B13",
+      "B15",
+      "B16"
+    ],
+    "priority": {
+      "B01": "MEDIUM",
+      "B03": "HIGH",
+      "B09": "HIGH",
+      "B10": "HIGH",
+      "B11": "MEDIUM",
+      "B12": "MEDIUM",
+      "B13": "MEDIUM",
+      "B15": "MEDIUM",
+      "B16": "MEDIUM"
+    },
+    "tier": 1,
+    "bucket_count": 9
+  },
+  {
+    "id": "C07",
+    "airtable_id": "recABCDE007",
+    "name": "Structured Thinking & First-Principles Reasoning",
+    "type": "soft",
+    "buckets": [
+      "B06",
+      "B09",
+      "B10",
+      "B11",
+      "B12",
+      "B16"
+    ],
+    "priority": {
+      "B06": "HIGH",
+      "B09": "HIGH",
+      "B10": "HIGH",
+      "B11": "HIGH",
+      "B12": "HIGH",
+      "B16": "HIGH"
+    },
+    "tier": 1,
+    "bucket_count": 6
+  },
+  {
+    "id": "C08",
+    "airtable_id": "recABCDE008",
+    "name": "Stakeholder Management & Influencing",
+    "type": "soft",
+    "buckets": [
+      "B01",
+      "B06",
+      "B07",
+      "B09",
+      "B10",
+      "B11",
+      "B15",
+      "B16"
+    ],
+    "priority": {
+      "B01": "HIGH",
+      "B06": "HIGH",
+      "B07": "HIGH",
+      "B09": "HIGH",
+      "B10": "HIGH",
+      "B11": "HIGH",
+      "B15": "MEDIUM",
+      "B16": "HIGH"
+    },
+    "tier": 1,
+    "bucket_count": 8
+  },
+  {
+    "id": "C09",
+    "airtable_id": "recABCDE009",
+    "name": "Entrepreneurial Mindset & Risk Tolerance",
+    "type": "soft",
+    "buckets": [
+      "B01",
+      "B03",
+      "B09",
+      "B10",
+      "B13"
+    ],
+    "priority": {
+      "B01": "MEDIUM",
+      "B03": "HIGH",
+      "B09": "HIGH",
+      "B10": "HIGH",
+      "B13": "HIGH"
+    },
+    "tier": 2,
+    "bucket_count": 5
+  },
+  {
+    "id": "C10",
+    "airtable_id": "recABCDE010",
+    "name": "Time Management & Prioritisation",
+    "type": "soft",
+    "buckets": [
+      "B05",
+      "B06",
+      "B07",
+      "B08",
+      "B09",
+      "B10",
+      "B11"
+    ],
+    "priority": {
+      "B05": "MEDIUM",
+      "B06": "MEDIUM",
+      "B07": "MEDIUM",
+      "B08": "HIGH",
+      "B09": "HIGH",
+      "B10": "MEDIUM",
+      "B11": "MEDIUM"
+    },
+    "tier": 1,
+    "bucket_count": 7
+  },
+  {
+    "id": "C11",
+    "airtable_id": "recABCDE011",
+    "name": "Sales Acumen & Negotiation",
+    "type": "hard",
+    "buckets": [
+      "B01",
+      "B10",
+      "B13",
+      "B14"
+    ],
+    "priority": {
+      "B01": "HIGH",
+      "B10": "MEDIUM",
+      "B13": "HIGH",
+      "B14": "MEDIUM"
+    },
+    "tier": 2,
+    "bucket_count": 4
+  },
+  {
+    "id": "C12",
+    "airtable_id": "recABCDE012",
+    "name": "Client Relationship Management (CRM)",
+    "type": "mixed",
+    "buckets": [
+      "B01",
+      "B02",
+      "B13",
+      "B14",
+      "B15"
+    ],
+    "priority": {
+      "B01": "HIGH",
+      "B02": "MEDIUM",
+      "B13": "HIGH",
+      "B14": "HIGH",
+      "B15": "MEDIUM"
+    },
+    "tier": 2,
+    "bucket_count": 5
+  },
+  {
+    "id": "C13",
+    "airtable_id": "recABCDE013",
+    "name": "Prospecting & Pipeline Management",
+    "type": "hard",
+    "buckets": [
+      "B01",
+      "B14"
+    ],
+    "priority": {
+      "B01": "HIGH",
+      "B14": "HIGH"
+    },
+    "tier": 2,
+    "bucket_count": 2
+  },
+  {
+    "id": "C14",
+    "airtable_id": "recABCDE014",
+    "name": "Objection Handling & Persuasion",
+    "type": "soft",
+    "buckets": [
+      "B01",
+      "B06",
+      "B14"
+    ],
+    "priority": {
+      "B01": "HIGH",
+      "B06": "MEDIUM",
+      "B14": "HIGH"
+    },
+    "tier": 2,
+    "bucket_count": 3
+  },
+  {
+    "id": "C15",
+    "airtable_id": "recABCDE015",
+    "name": "Digital Sales & Social Selling",
+    "type": "hard",
+    "buckets": [
+      "B01",
+      "B03",
+      "B13"
+    ],
+    "priority": {
+      "B01": "MEDIUM",
+      "B03": "HIGH",
+      "B13": "MEDIUM"
+    },
+    "tier": 2,
+    "bucket_count": 3
+  },
+  {
+    "id": "C16",
+    "airtable_id": "recABCDE016",
+    "name": "Target Orientation & Revenue Focus",
+    "type": "soft",
+    "buckets": [
+      "B01",
+      "B10",
+      "B13",
+      "B14"
+    ],
+    "priority": {
+      "B01": "HIGH",
+      "B10": "HIGH",
+      "B13": "HIGH",
+      "B14": "HIGH"
+    },
+    "tier": 2,
+    "bucket_count": 4
+  },
+  {
+    "id": "C17",
+    "airtable_id": "recABCDE017",
+    "name": "Brand Strategy & Positioning",
+    "type": "hard",
+    "buckets": [
+      "B02",
+      "B10",
+      "B13"
+    ],
+    "priority": {
+      "B02": "HIGH",
+      "B10": "MEDIUM",
+      "B13": "HIGH"
+    },
+    "tier": 2,
+    "bucket_count": 3
+  },
+  {
+    "id": "C18",
+    "airtable_id": "recABCDE018",
+    "name": "Consumer Behaviour & Market Research",
+    "type": "hard",
+    "buckets": [
+      "B02",
+      "B03",
+      "B09",
+      "B13",
+      "B15"
+    ],
+    "priority": {
+      "B02": "HIGH",
+      "B03": "MEDIUM",
+      "B09": "HIGH",
+      "B13": "HIGH",
+      "B15": "MEDIUM"
+    },
+    "tier": 2,
+    "bucket_count": 5
+  },
+  {
+    "id": "C19",
+    "airtable_id": "recABCDE019",
+    "name": "Marketing Campaign Planning & Execution",
+    "type": "hard",
+    "buckets": [
+      "B02",
+      "B03",
+      "B13"
+    ],
+    "priority": {
+      "B02": "HIGH",
+      "B03": "HIGH",
+      "B13": "MEDIUM"
+    },
+    "tier": 2,
+    "bucket_count": 3
+  },
+  {
+    "id": "C20",
+    "airtable_id": "recABCDE020",
+    "name": "Product Advertising & Media Planning",
+    "type": "hard",
+    "buckets": [
+      "B02",
+      "B03"
+    ],
+    "priority": {
+      "B02": "HIGH",
+      "B03": "MEDIUM"
+    },
+    "tier": 2,
+    "bucket_count": 2
+  },
+  {
+    "id": "C21",
+    "airtable_id": "recABCDE021",
+    "name": "Market Sizing & Go-To-Market Strategy",
+    "type": "hard",
+    "buckets": [
+      "B02",
+      "B06",
+      "B09",
+      "B10"
+    ],
+    "priority": {
+      "B02": "MEDIUM",
+      "B06": "HIGH",
+      "B09": "HIGH",
+      "B10": "HIGH"
+    },
+    "tier": 2,
+    "bucket_count": 4
+  },
+  {
+    "id": "C22",
+    "airtable_id": "recABCDE022",
+    "name": "Customer Segmentation & Targeting",
+    "type": "hard",
+    "buckets": [
+      "B02",
+      "B03",
+      "B09",
+      "B12",
+      "B13"
+    ],
+    "priority": {
+      "B02": "HIGH",
+      "B03": "HIGH",
+      "B09": "HIGH",
+      "B12": "MEDIUM",
+      "B13": "HIGH"
+    },
+    "tier": 2,
+    "bucket_count": 5
+  },
+  {
+    "id": "C23",
+    "airtable_id": "recABCDE023",
+    "name": "SEO/SEM & Performance Marketing",
+    "type": "hard",
+    "buckets": [
+      "B03",
+      "B13"
+    ],
+    "priority": {
+      "B03": "HIGH",
+      "B13": "MEDIUM"
+    },
+    "tier": 2,
+    "bucket_count": 2
+  },
+  {
+    "id": "C24",
+    "airtable_id": "recABCDE024",
+    "name": "Social Media Strategy & Content Creation",
+    "type": "hard",
+    "buckets": [
+      "B02",
+      "B03",
+      "B16"
+    ],
+    "priority": {
+      "B02": "MEDIUM",
+      "B03": "HIGH",
+      "B16": "MEDIUM"
+    },
+    "tier": 2,
+    "bucket_count": 3
+  },
+  {
+    "id": "C25",
+    "airtable_id": "recABCDE025",
+    "name": "Growth Hacking & Funnel Optimisation",
+    "type": "hard",
+    "buckets": [
+      "B03",
+      "B09",
+      "B13"
+    ],
+    "priority": {
+      "B03": "HIGH",
+      "B09": "MEDIUM",
+      "B13": "HIGH"
+    },
+    "tier": 2,
+    "bucket_count": 3
+  },
+  {
+    "id": "C26",
+    "airtable_id": "recABCDE026",
+    "name": "Marketing Analytics & Attribution",
+    "type": "hard",
+    "buckets": [
+      "B03",
+      "B12",
+      "B13"
+    ],
+    "priority": {
+      "B03": "HIGH",
+      "B12": "MEDIUM",
+      "B13": "MEDIUM"
+    },
+    "tier": 2,
+    "bucket_count": 3
+  },
+  {
+    "id": "C27",
+    "airtable_id": "recABCDE027",
+    "name": "Email Marketing & Marketing Automation",
+    "type": "hard",
+    "buckets": [
+      "B03"
+    ],
+    "priority": {
+      "B03": "HIGH"
+    },
+    "tier": 3,
+    "bucket_count": 1
+  },
+  {
+    "id": "C28",
+    "airtable_id": "recABCDE028",
+    "name": "Tech-Savviness & Digital Tool Fluency",
+    "type": "mixed",
+    "buckets": [
+      "B03",
+      "B09",
+      "B11",
+      "B12",
+      "B13"
+    ],
+    "priority": {
+      "B03": "HIGH",
+      "B09": "MEDIUM",
+      "B11": "HIGH",
+      "B12": "HIGH",
+      "B13": "MEDIUM"
+    },
+    "tier": 2,
+    "bucket_count": 5
+  },
+  {
+    "id": "C29",
+    "airtable_id": "recABCDE029",
+    "name": "Financial Modelling & Valuation",
+    "type": "hard",
+    "buckets": [
+      "B04",
+      "B05",
+      "B14"
+    ],
+    "priority": {
+      "B04": "HIGH",
+      "B05": "HIGH",
+      "B14": "HIGH"
+    },
+    "tier": 2,
+    "bucket_count": 3
+  },
+  {
+    "id": "C30",
+    "airtable_id": "recABCDE030",
+    "name": "Capital Markets & Investment Knowledge",
+    "type": "hard",
+    "buckets": [
+      "B04",
+      "B14"
+    ],
+    "priority": {
+      "B04": "HIGH",
+      "B14": "HIGH"
+    },
+    "tier": 2,
+    "bucket_count": 2
+  },
+  {
+    "id": "C31",
+    "airtable_id": "recABCDE031",
+    "name": "Financial Statement Analysis (FSA)",
+    "type": "hard",
+    "buckets": [
+      "B04",
+      "B05",
+      "B06",
+      "B14"
+    ],
+    "priority": {
+      "B04": "HIGH",
+      "B05": "HIGH",
+      "B06": "MEDIUM",
+      "B14": "HIGH"
+    },
+    "tier": 2,
+    "bucket_count": 4
+  },
+  {
+    "id": "C32",
+    "airtable_id": "recABCDE032",
+    "name": "Mergers & Acquisitions (M&A) Concepts",
+    "type": "hard",
+    "buckets": [
+      "B04",
+      "B06"
+    ],
+    "priority": {
+      "B04": "HIGH",
+      "B06": "MEDIUM"
+    },
+    "tier": 2,
+    "bucket_count": 2
+  },
+  {
+    "id": "C33",
+    "airtable_id": "recABCDE033",
+    "name": "Risk Management & Compliance",
+    "type": "hard",
+    "buckets": [
+      "B04",
+      "B05",
+      "B08",
+      "B14",
+      "B15"
+    ],
+    "priority": {
+      "B04": "HIGH",
+      "B05": "HIGH",
+      "B08": "MEDIUM",
+      "B14": "HIGH",
+      "B15": "MEDIUM"
+    },
+    "tier": 2,
+    "bucket_count": 5
+  },
+  {
+    "id": "C34",
+    "airtable_id": "recABCDE034",
+    "name": "Financial Literacy & P&L Thinking",
+    "type": "hard",
+    "buckets": [
+      "B01",
+      "B05",
+      "B09",
+      "B10",
+      "B13",
+      "B14"
+    ],
+    "priority": {
+      "B01": "MEDIUM",
+      "B05": "HIGH",
+      "B09": "HIGH",
+      "B10": "HIGH",
+      "B13": "HIGH",
+      "B14": "HIGH"
+    },
+    "tier": 1,
+    "bucket_count": 6
+  },
+  {
+    "id": "C35",
+    "airtable_id": "recABCDE035",
+    "name": "Numerical Aptitude (SSPD / ROI Calculations)",
+    "type": "hard",
+    "buckets": [
+      "B04",
+      "B05",
+      "B08",
+      "B12",
+      "B14"
+    ],
+    "priority": {
+      "B04": "HIGH",
+      "B05": "HIGH",
+      "B08": "MEDIUM",
+      "B12": "HIGH",
+      "B14": "HIGH"
+    },
+    "tier": 2,
+    "bucket_count": 5
+  },
+  {
+    "id": "C36",
+    "airtable_id": "recABCDE036",
+    "name": "Budgeting & Forecasting",
+    "type": "hard",
+    "buckets": [
+      "B05",
+      "B08",
+      "B10"
+    ],
+    "priority": {
+      "B05": "HIGH",
+      "B08": "MEDIUM",
+      "B10": "HIGH"
+    },
+    "tier": 2,
+    "bucket_count": 3
+  },
+  {
+    "id": "C37",
+    "airtable_id": "recABCDE037",
+    "name": "Cost Management & Variance Analysis",
+    "type": "hard",
+    "buckets": [
+      "B05",
+      "B08"
+    ],
+    "priority": {
+      "B05": "HIGH",
+      "B08": "HIGH"
+    },
+    "tier": 2,
+    "bucket_count": 2
+  },
+  {
+    "id": "C38",
+    "airtable_id": "recABCDE038",
+    "name": "Business Partnering & Finance Communication",
+    "type": "mixed",
+    "buckets": [
+      "B05",
+      "B10"
+    ],
+    "priority": {
+      "B05": "HIGH",
+      "B10": "MEDIUM"
+    },
+    "tier": 2,
+    "bucket_count": 2
+  },
+  {
+    "id": "C39",
+    "airtable_id": "recABCDE039",
+    "name": "Case Solving & Hypothesis-Driven Thinking",
+    "type": "hard",
+    "buckets": [
+      "B06",
+      "B10",
+      "B11"
+    ],
+    "priority": {
+      "B06": "HIGH",
+      "B10": "HIGH",
+      "B11": "HIGH"
+    },
+    "tier": 2,
+    "bucket_count": 3
+  },
+  {
+    "id": "C40",
+    "airtable_id": "recABCDE040",
+    "name": "Strategic Frameworks (SWOT, Porter's, BCG, etc.)",
+    "type": "hard",
+    "buckets": [
+      "B06",
+      "B10",
+      "B15"
+    ],
+    "priority": {
+      "B06": "HIGH",
+      "B10": "HIGH",
+      "B15": "MEDIUM"
+    },
+    "tier": 2,
+    "bucket_count": 3
+  },
+  {
+    "id": "C41",
+    "airtable_id": "recABCDE041",
+    "name": "Client Management & Executive Communication",
+    "type": "soft",
+    "buckets": [
+      "B06",
+      "B10",
+      "B15"
+    ],
+    "priority": {
+      "B06": "HIGH",
+      "B10": "MEDIUM",
+      "B15": "MEDIUM"
+    },
+    "tier": 2,
+    "bucket_count": 3
+  },
+  {
+    "id": "C42",
+    "airtable_id": "recABCDE042",
+    "name": "Research Synthesis & Insight Generation",
+    "type": "hard",
+    "buckets": [
+      "B06",
+      "B09",
+      "B12",
+      "B16"
+    ],
+    "priority": {
+      "B06": "HIGH",
+      "B09": "HIGH",
+      "B12": "HIGH",
+      "B16": "HIGH"
+    },
+    "tier": 2,
+    "bucket_count": 4
+  },
+  {
+    "id": "C43",
+    "airtable_id": "recABCDE043",
+    "name": "Talent Acquisition & Recruitment",
+    "type": "hard",
+    "buckets": [
+      "B07"
+    ],
+    "priority": {
+      "B07": "HIGH"
+    },
+    "tier": 3,
+    "bucket_count": 1
+  },
+  {
+    "id": "C44",
+    "airtable_id": "recABCDE044",
+    "name": "Learning & Development (L&D) Design",
+    "type": "hard",
+    "buckets": [
+      "B07"
+    ],
+    "priority": {
+      "B07": "HIGH"
+    },
+    "tier": 3,
+    "bucket_count": 1
+  },
+  {
+    "id": "C45",
+    "airtable_id": "recABCDE045",
+    "name": "HR Business Partnering (HRBP)",
+    "type": "mixed",
+    "buckets": [
+      "B07"
+    ],
+    "priority": {
+      "B07": "HIGH"
+    },
+    "tier": 3,
+    "bucket_count": 1
+  },
+  {
+    "id": "C46",
+    "airtable_id": "recABCDE046",
+    "name": "Compensation & Benefits / Total Rewards",
+    "type": "hard",
+    "buckets": [
+      "B07"
+    ],
+    "priority": {
+      "B07": "HIGH"
+    },
+    "tier": 3,
+    "bucket_count": 1
+  },
+  {
+    "id": "C47",
+    "airtable_id": "recABCDE047",
+    "name": "Organisational Behaviour & Culture Building",
+    "type": "soft",
+    "buckets": [
+      "B07",
+      "B10"
+    ],
+    "priority": {
+      "B07": "HIGH",
+      "B10": "MEDIUM"
+    },
+    "tier": 2,
+    "bucket_count": 2
+  },
+  {
+    "id": "C48",
+    "airtable_id": "recABCDE048",
+    "name": "Employee Engagement & Retention",
+    "type": "mixed",
+    "buckets": [
+      "B07",
+      "B10"
+    ],
+    "priority": {
+      "B07": "HIGH",
+      "B10": "MEDIUM"
+    },
+    "tier": 2,
+    "bucket_count": 2
+  },
+  {
+    "id": "C49",
+    "airtable_id": "recABCDE049",
+    "name": "Labour Law & HR Compliance",
+    "type": "hard",
+    "buckets": [
+      "B07"
+    ],
+    "priority": {
+      "B07": "MEDIUM"
+    },
+    "tier": 3,
+    "bucket_count": 1
+  },
+  {
+    "id": "C50",
+    "airtable_id": "recABCDE050",
+    "name": "Diversity, Equity & Inclusion (DEI)",
+    "type": "soft",
+    "buckets": [
+      "B07",
+      "B16"
+    ],
+    "priority": {
+      "B07": "MEDIUM",
+      "B16": "HIGH"
+    },
+    "tier": 2,
+    "bucket_count": 2
+  },
+  {
+    "id": "C51",
+    "airtable_id": "recABCDE051",
+    "name": "Supply Chain Management & Logistics",
+    "type": "hard",
+    "buckets": [
+      "B08",
+      "B13"
+    ],
+    "priority": {
+      "B08": "HIGH",
+      "B13": "HIGH"
+    },
+    "tier": 2,
+    "bucket_count": 2
+  },
+  {
+    "id": "C52",
+    "airtable_id": "recABCDE052",
+    "name": "Process Improvement & Lean/Six Sigma",
+    "type": "hard",
+    "buckets": [
+      "B08",
+      "B10",
+      "B11",
+      "B15"
+    ],
+    "priority": {
+      "B08": "HIGH",
+      "B10": "MEDIUM",
+      "B11": "MEDIUM",
+      "B15": "MEDIUM"
+    },
+    "tier": 2,
+    "bucket_count": 4
+  },
+  {
+    "id": "C53",
+    "airtable_id": "recABCDE053",
+    "name": "Inventory & Demand Planning",
+    "type": "hard",
+    "buckets": [
+      "B08",
+      "B13"
+    ],
+    "priority": {
+      "B08": "HIGH",
+      "B13": "HIGH"
+    },
+    "tier": 2,
+    "bucket_count": 2
+  },
+  {
+    "id": "C54",
+    "airtable_id": "recABCDE054",
+    "name": "Vendor Management & Procurement",
+    "type": "hard",
+    "buckets": [
+      "B08",
+      "B15"
+    ],
+    "priority": {
+      "B08": "HIGH",
+      "B15": "MEDIUM"
+    },
+    "tier": 2,
+    "bucket_count": 2
+  },
+  {
+    "id": "C55",
+    "airtable_id": "recABCDE055",
+    "name": "Project Management (Waterfall/Agile)",
+    "type": "hard",
+    "buckets": [
+      "B08",
+      "B09",
+      "B10",
+      "B11",
+      "B15"
+    ],
+    "priority": {
+      "B08": "HIGH",
+      "B09": "HIGH",
+      "B10": "MEDIUM",
+      "B11": "HIGH",
+      "B15": "MEDIUM"
+    },
+    "tier": 2,
+    "bucket_count": 5
+  },
+  {
+    "id": "C56",
+    "airtable_id": "recABCDE056",
+    "name": "Decision-Making Under Ambiguity",
+    "type": "soft",
+    "buckets": [
+      "B06",
+      "B08",
+      "B09",
+      "B10",
+      "B12"
+    ],
+    "priority": {
+      "B06": "HIGH",
+      "B08": "HIGH",
+      "B09": "HIGH",
+      "B10": "HIGH",
+      "B12": "MEDIUM"
+    },
+    "tier": 2,
+    "bucket_count": 5
+  },
+  {
+    "id": "C57",
+    "airtable_id": "recABCDE057",
+    "name": "Product Vision & Roadmap Planning",
+    "type": "hard",
+    "buckets": [
+      "B09"
+    ],
+    "priority": {
+      "B09": "HIGH"
+    },
+    "tier": 3,
+    "bucket_count": 1
+  },
+  {
+    "id": "C58",
+    "airtable_id": "recABCDE058",
+    "name": "User Research & User Empathy",
+    "type": "hard",
+    "buckets": [
+      "B09",
+      "B11"
+    ],
+    "priority": {
+      "B09": "HIGH",
+      "B11": "HIGH"
+    },
+    "tier": 2,
+    "bucket_count": 2
+  },
+  {
+    "id": "C59",
+    "airtable_id": "recABCDE059",
+    "name": "Product Metrics & North Star Framework",
+    "type": "hard",
+    "buckets": [
+      "B09",
+      "B12"
+    ],
+    "priority": {
+      "B09": "HIGH",
+      "B12": "MEDIUM"
+    },
+    "tier": 2,
+    "bucket_count": 2
+  },
+  {
+    "id": "C60",
+    "airtable_id": "recABCDE060",
+    "name": "Cross-Functional Team Leadership",
+    "type": "soft",
+    "buckets": [
+      "B09",
+      "B10",
+      "B11"
+    ],
+    "priority": {
+      "B09": "HIGH",
+      "B10": "HIGH",
+      "B11": "MEDIUM"
+    },
+    "tier": 2,
+    "bucket_count": 3
+  },
+  {
+    "id": "C61",
+    "airtable_id": "recABCDE061",
+    "name": "A/B Testing & Experimentation Mindset",
+    "type": "hard",
+    "buckets": [
+      "B03",
+      "B09",
+      "B12"
+    ],
+    "priority": {
+      "B03": "HIGH",
+      "B09": "HIGH",
+      "B12": "MEDIUM"
+    },
+    "tier": 2,
+    "bucket_count": 3
+  },
+  {
+    "id": "C62",
+    "airtable_id": "recABCDE062",
+    "name": "Technical Literacy (APIs, SQL, Basic Coding Understanding)",
+    "type": "hard",
+    "buckets": [
+      "B09",
+      "B11",
+      "B12"
+    ],
+    "priority": {
+      "B09": "MEDIUM",
+      "B11": "HIGH",
+      "B12": "HIGH"
+    },
+    "tier": 2,
+    "bucket_count": 3
+  },
+  {
+    "id": "C63",
+    "airtable_id": "recABCDE063",
+    "name": "Business Model Design & Innovation",
+    "type": "hard",
+    "buckets": [
+      "B09",
+      "B10"
+    ],
+    "priority": {
+      "B09": "HIGH",
+      "B10": "HIGH"
+    },
+    "tier": 2,
+    "bucket_count": 2
+  },
+  {
+    "id": "C64",
+    "airtable_id": "recABCDE064",
+    "name": "Execution Excellence & Follow-Through",
+    "type": "soft",
+    "buckets": [
+      "B01",
+      "B08",
+      "B09",
+      "B10",
+      "B13"
+    ],
+    "priority": {
+      "B01": "MEDIUM",
+      "B08": "HIGH",
+      "B09": "HIGH",
+      "B10": "HIGH",
+      "B13": "HIGH"
+    },
+    "tier": 2,
+    "bucket_count": 5
+  },
+  {
+    "id": "C65",
+    "airtable_id": "recABCDE065",
+    "name": "Corporate Governance & Ethics",
+    "type": "soft",
+    "buckets": [
+      "B10",
+      "B14",
+      "B16"
+    ],
+    "priority": {
+      "B10": "MEDIUM",
+      "B14": "MEDIUM",
+      "B16": "HIGH"
+    },
+    "tier": 2,
+    "bucket_count": 3
+  },
+  {
+    "id": "C66",
+    "airtable_id": "recABCDE066",
+    "name": "Requirements Gathering & Documentation (BRD/FRD)",
+    "type": "hard",
+    "buckets": [
+      "B11"
+    ],
+    "priority": {
+      "B11": "HIGH"
+    },
+    "tier": 3,
+    "bucket_count": 1
+  },
+  {
+    "id": "C67",
+    "airtable_id": "recABCDE067",
+    "name": "Systems Thinking & IT Architecture Awareness",
+    "type": "hard",
+    "buckets": [
+      "B11",
+      "B12"
+    ],
+    "priority": {
+      "B11": "HIGH",
+      "B12": "MEDIUM"
+    },
+    "tier": 2,
+    "bucket_count": 2
+  },
+  {
+    "id": "C68",
+    "airtable_id": "recABCDE068",
+    "name": "Process Mapping & Workflow Analysis",
+    "type": "hard",
+    "buckets": [
+      "B08",
+      "B11"
+    ],
+    "priority": {
+      "B08": "MEDIUM",
+      "B11": "HIGH"
+    },
+    "tier": 2,
+    "bucket_count": 2
+  },
+  {
+    "id": "C69",
+    "airtable_id": "recABCDE069",
+    "name": "ERP & Enterprise Tools (SAP, Salesforce, etc.)",
+    "type": "hard",
+    "buckets": [
+      "B08",
+      "B11"
+    ],
+    "priority": {
+      "B08": "MEDIUM",
+      "B11": "HIGH"
+    },
+    "tier": 2,
+    "bucket_count": 2
+  },
+  {
+    "id": "C70",
+    "airtable_id": "recABCDE070",
+    "name": "UAT & Quality Assurance Mindset",
+    "type": "hard",
+    "buckets": [
+      "B11"
+    ],
+    "priority": {
+      "B11": "MEDIUM"
+    },
+    "tier": 3,
+    "bucket_count": 1
+  },
+  {
+    "id": "C71",
+    "airtable_id": "recABCDE071",
+    "name": "Statistical Analysis & Hypothesis Testing",
+    "type": "hard",
+    "buckets": [
+      "B12",
+      "B15"
+    ],
+    "priority": {
+      "B12": "HIGH",
+      "B15": "MEDIUM"
+    },
+    "tier": 2,
+    "bucket_count": 2
+  },
+  {
+    "id": "C72",
+    "airtable_id": "recABCDE072",
+    "name": "SQL & Database Querying",
+    "type": "hard",
+    "buckets": [
+      "B11",
+      "B12"
+    ],
+    "priority": {
+      "B11": "HIGH",
+      "B12": "HIGH"
+    },
+    "tier": 2,
+    "bucket_count": 2
+  },
+  {
+    "id": "C73",
+    "airtable_id": "recABCDE073",
+    "name": "Data Visualisation & Storytelling with Data",
+    "type": "hard",
+    "buckets": [
+      "B05",
+      "B06",
+      "B09",
+      "B12",
+      "B16"
+    ],
+    "priority": {
+      "B05": "MEDIUM",
+      "B06": "HIGH",
+      "B09": "MEDIUM",
+      "B12": "HIGH",
+      "B16": "MEDIUM"
+    },
+    "tier": 2,
+    "bucket_count": 5
+  },
+  {
+    "id": "C74",
+    "airtable_id": "recABCDE074",
+    "name": "Machine Learning Fundamentals",
+    "type": "hard",
+    "buckets": [
+      "B12"
+    ],
+    "priority": {
+      "B12": "HIGH"
+    },
+    "tier": 3,
+    "bucket_count": 1
+  },
+  {
+    "id": "C75",
+    "airtable_id": "recABCDE075",
+    "name": "Python / R for Data Analysis",
+    "type": "hard",
+    "buckets": [
+      "B12"
+    ],
+    "priority": {
+      "B12": "HIGH"
+    },
+    "tier": 3,
+    "bucket_count": 1
+  },
+  {
+    "id": "C76",
+    "airtable_id": "recABCDE076",
+    "name": "Business Intelligence Tools (Power BI, Tableau)",
+    "type": "hard",
+    "buckets": [
+      "B05",
+      "B11",
+      "B12"
+    ],
+    "priority": {
+      "B05": "MEDIUM",
+      "B11": "MEDIUM",
+      "B12": "HIGH"
+    },
+    "tier": 2,
+    "bucket_count": 3
+  },
+  {
+    "id": "C77",
+    "airtable_id": "recABCDE077",
+    "name": "Category Management & Merchandising",
+    "type": "hard",
+    "buckets": [
+      "B13"
+    ],
+    "priority": {
+      "B13": "HIGH"
+    },
+    "tier": 3,
+    "bucket_count": 1
+  },
+  {
+    "id": "C78",
+    "airtable_id": "recABCDE078",
+    "name": "E-Commerce Marketplace Operations",
+    "type": "hard",
+    "buckets": [
+      "B13"
+    ],
+    "priority": {
+      "B13": "HIGH"
+    },
+    "tier": 3,
+    "bucket_count": 1
+  },
+  {
+    "id": "C79",
+    "airtable_id": "recABCDE079",
+    "name": "Last-Mile Delivery & Fulfilment",
+    "type": "hard",
+    "buckets": [
+      "B08",
+      "B13"
+    ],
+    "priority": {
+      "B08": "MEDIUM",
+      "B13": "HIGH"
+    },
+    "tier": 2,
+    "bucket_count": 2
+  },
+  {
+    "id": "C80",
+    "airtable_id": "recABCDE080",
+    "name": "Pricing Strategy & Revenue Management",
+    "type": "hard",
+    "buckets": [
+      "B02",
+      "B05",
+      "B13"
+    ],
+    "priority": {
+      "B02": "MEDIUM",
+      "B05": "MEDIUM",
+      "B13": "HIGH"
+    },
+    "tier": 2,
+    "bucket_count": 3
+  },
+  {
+    "id": "C81",
+    "airtable_id": "recABCDE081",
+    "name": "Credit Analysis & Underwriting",
+    "type": "hard",
+    "buckets": [
+      "B14"
+    ],
+    "priority": {
+      "B14": "HIGH"
+    },
+    "tier": 3,
+    "bucket_count": 1
+  },
+  {
+    "id": "C82",
+    "airtable_id": "recABCDE082",
+    "name": "Regulatory Compliance (RBI, SEBI, IRDAI)",
+    "type": "hard",
+    "buckets": [
+      "B14"
+    ],
+    "priority": {
+      "B14": "HIGH"
+    },
+    "tier": 3,
+    "bucket_count": 1
+  },
+  {
+    "id": "C83",
+    "airtable_id": "recABCDE083",
+    "name": "Insurance Products & Policy Knowledge",
+    "type": "hard",
+    "buckets": [
+      "B14"
+    ],
+    "priority": {
+      "B14": "MEDIUM"
+    },
+    "tier": 3,
+    "bucket_count": 1
+  },
+  {
+    "id": "C84",
+    "airtable_id": "recABCDE084",
+    "name": "Wealth Management & Investment Advisory",
+    "type": "hard",
+    "buckets": [
+      "B04",
+      "B14"
+    ],
+    "priority": {
+      "B04": "MEDIUM",
+      "B14": "HIGH"
+    },
+    "tier": 2,
+    "bucket_count": 2
+  },
+  {
+    "id": "C85",
+    "airtable_id": "recABCDE085",
+    "name": "Healthcare System Understanding (India)",
+    "type": "hard",
+    "buckets": [
+      "B15"
+    ],
+    "priority": {
+      "B15": "HIGH"
+    },
+    "tier": 3,
+    "bucket_count": 1
+  },
+  {
+    "id": "C86",
+    "airtable_id": "recABCDE086",
+    "name": "Pharma Marketing & Medical Affairs",
+    "type": "hard",
+    "buckets": [
+      "B15"
+    ],
+    "priority": {
+      "B15": "HIGH"
+    },
+    "tier": 3,
+    "bucket_count": 1
+  },
+  {
+    "id": "C87",
+    "airtable_id": "recABCDE087",
+    "name": "Clinical Trial & Regulatory (CDSCO/FDA awareness)",
+    "type": "hard",
+    "buckets": [
+      "B15"
+    ],
+    "priority": {
+      "B15": "HIGH"
+    },
+    "tier": 3,
+    "bucket_count": 1
+  },
+  {
+    "id": "C88",
+    "airtable_id": "recABCDE088",
+    "name": "Hospital & Healthcare Operations",
+    "type": "hard",
+    "buckets": [
+      "B15"
+    ],
+    "priority": {
+      "B15": "HIGH"
+    },
+    "tier": 3,
+    "bucket_count": 1
+  },
+  {
+    "id": "C89",
+    "airtable_id": "recABCDE089",
+    "name": "Policy Analysis & Government Interface",
+    "type": "hard",
+    "buckets": [
+      "B16"
+    ],
+    "priority": {
+      "B16": "HIGH"
+    },
+    "tier": 3,
+    "bucket_count": 1
+  },
+  {
+    "id": "C90",
+    "airtable_id": "recABCDE090",
+    "name": "Social Impact Measurement (SROI, Theory of Change)",
+    "type": "hard",
+    "buckets": [
+      "B16"
+    ],
+    "priority": {
+      "B16": "HIGH"
+    },
+    "tier": 3,
+    "bucket_count": 1
+  },
+  {
+    "id": "C91",
+    "airtable_id": "recABCDE091",
+    "name": "Development Sector Fundraising & Grant Writing",
+    "type": "hard",
+    "buckets": [
+      "B16"
+    ],
+    "priority": {
+      "B16": "HIGH"
+    },
+    "tier": 3,
+    "bucket_count": 1
+  },
+  {
+    "id": "C92",
+    "airtable_id": "recABCDE092",
+    "name": "Community Engagement & Participatory Methods",
+    "type": "soft",
+    "buckets": [
+      "B16"
+    ],
+    "priority": {
+      "B16": "HIGH"
+    },
+    "tier": 3,
+    "bucket_count": 1
+  },
+  {
+    "id": "C93",
+    "airtable_id": "recABCDE093",
+    "name": "Values-Driven Decision Making & Social Sensitivity",
+    "type": "soft",
+    "buckets": [
+      "B07",
+      "B16"
+    ],
+    "priority": {
+      "B07": "MEDIUM",
+      "B16": "HIGH"
+    },
+    "tier": 2,
+    "bucket_count": 2
+  },
+  {
+    "id": "C94",
+    "airtable_id": "recABCDE094",
+    "name": "Presentation Design & Data Storytelling",
+    "type": "mixed",
+    "buckets": [
+      "B02",
+      "B06",
+      "B09",
+      "B10",
+      "B12"
+    ],
+    "priority": {
+      "B02": "MEDIUM",
+      "B06": "HIGH",
+      "B09": "MEDIUM",
+      "B10": "MEDIUM",
+      "B12": "HIGH"
+    },
+    "tier": 2,
+    "bucket_count": 5
+  },
+  {
+    "id": "C95",
+    "airtable_id": "recABCDE095",
+    "name": "Networking & Relationship Building",
+    "type": "soft",
+    "buckets": [
+      "B01",
+      "B04",
+      "B06",
+      "B07",
+      "B10",
+      "B14",
+      "B16"
+    ],
+    "priority": {
+      "B01": "HIGH",
+      "B04": "MEDIUM",
+      "B06": "MEDIUM",
+      "B07": "MEDIUM",
+      "B10": "MEDIUM",
+      "B14": "HIGH",
+      "B16": "MEDIUM"
+    },
+    "tier": 1,
+    "bucket_count": 7
+  }
+];
+
+const WEIGHT_MATRIX = {
+  "B01": {
+    "C01": "HIGH",
+    "C02": "MEDIUM",
+    "C04": "HIGH",
+    "C06": "MEDIUM",
+    "C08": "HIGH",
+    "C09": "MEDIUM",
+    "C11": "HIGH",
+    "C12": "HIGH",
+    "C13": "HIGH",
+    "C14": "HIGH",
+    "C15": "MEDIUM",
+    "C16": "HIGH",
+    "C34": "MEDIUM",
+    "C64": "MEDIUM",
+    "C95": "HIGH"
+  },
+  "B02": {
+    "C01": "HIGH",
+    "C02": "HIGH",
+    "C05": "MEDIUM",
+    "C12": "MEDIUM",
+    "C17": "HIGH",
+    "C18": "HIGH",
+    "C19": "HIGH",
+    "C20": "HIGH",
+    "C21": "MEDIUM",
+    "C22": "HIGH",
+    "C24": "MEDIUM",
+    "C80": "MEDIUM",
+    "C94": "MEDIUM"
+  },
+  "B03": {
+    "C01": "MEDIUM",
+    "C06": "HIGH",
+    "C09": "HIGH",
+    "C15": "HIGH",
+    "C18": "MEDIUM",
+    "C19": "HIGH",
+    "C20": "MEDIUM",
+    "C22": "HIGH",
+    "C23": "HIGH",
+    "C24": "HIGH",
+    "C25": "HIGH",
+    "C26": "HIGH",
+    "C27": "HIGH",
+    "C28": "HIGH",
+    "C61": "HIGH"
+  },
+  "B06": {
+    "C01": "HIGH",
+    "C02": "HIGH",
+    "C03": "HIGH",
+    "C04": "HIGH",
+    "C05": "HIGH",
+    "C07": "HIGH",
+    "C08": "HIGH",
+    "C10": "MEDIUM",
+    "C14": "MEDIUM",
+    "C21": "HIGH",
+    "C31": "MEDIUM",
+    "C32": "MEDIUM",
+    "C39": "HIGH",
+    "C40": "HIGH",
+    "C41": "HIGH",
+    "C42": "HIGH",
+    "C56": "HIGH",
+    "C73": "HIGH",
+    "C94": "HIGH",
+    "C95": "MEDIUM"
+  },
+  "B07": {
+    "C01": "HIGH",
+    "C02": "MEDIUM",
+    "C04": "HIGH",
+    "C05": "HIGH",
+    "C08": "HIGH",
+    "C10": "MEDIUM",
+    "C43": "HIGH",
+    "C44": "HIGH",
+    "C45": "HIGH",
+    "C46": "HIGH",
+    "C47": "HIGH",
+    "C48": "HIGH",
+    "C49": "MEDIUM",
+    "C50": "MEDIUM",
+    "C93": "MEDIUM",
+    "C95": "MEDIUM"
+  },
+  "B08": {
+    "C01": "MEDIUM",
+    "C03": "HIGH",
+    "C04": "HIGH",
+    "C05": "HIGH",
+    "C10": "HIGH",
+    "C33": "MEDIUM",
+    "C35": "MEDIUM",
+    "C36": "MEDIUM",
+    "C37": "HIGH",
+    "C51": "HIGH",
+    "C52": "HIGH",
+    "C53": "HIGH",
+    "C54": "HIGH",
+    "C55": "HIGH",
+    "C56": "HIGH",
+    "C64": "HIGH",
+    "C68": "MEDIUM",
+    "C69": "MEDIUM",
+    "C79": "MEDIUM"
+  },
+  "B09": {
+    "C01": "HIGH",
+    "C02": "HIGH",
+    "C03": "HIGH",
+    "C04": "HIGH",
+    "C05": "MEDIUM",
+    "C06": "HIGH",
+    "C07": "HIGH",
+    "C08": "HIGH",
+    "C09": "HIGH",
+    "C10": "HIGH",
+    "C18": "HIGH",
+    "C21": "HIGH",
+    "C22": "HIGH",
+    "C25": "MEDIUM",
+    "C28": "MEDIUM",
+    "C34": "HIGH",
+    "C42": "HIGH",
+    "C55": "HIGH",
+    "C56": "HIGH",
+    "C57": "HIGH",
+    "C58": "HIGH",
+    "C59": "HIGH",
+    "C60": "HIGH",
+    "C61": "HIGH",
+    "C62": "MEDIUM",
+    "C63": "HIGH",
+    "C64": "HIGH",
+    "C73": "MEDIUM",
+    "C94": "MEDIUM"
+  },
+  "B10": {
+    "C01": "HIGH",
+    "C02": "MEDIUM",
+    "C03": "HIGH",
+    "C04": "HIGH",
+    "C05": "HIGH",
+    "C06": "HIGH",
+    "C07": "HIGH",
+    "C08": "HIGH",
+    "C09": "HIGH",
+    "C10": "MEDIUM",
+    "C11": "MEDIUM",
+    "C16": "HIGH",
+    "C17": "MEDIUM",
+    "C21": "HIGH",
+    "C34": "HIGH",
+    "C36": "HIGH",
+    "C38": "MEDIUM",
+    "C39": "HIGH",
+    "C40": "HIGH",
+    "C41": "MEDIUM",
+    "C47": "MEDIUM",
+    "C48": "MEDIUM",
+    "C52": "MEDIUM",
+    "C55": "MEDIUM",
+    "C56": "HIGH",
+    "C60": "HIGH",
+    "C63": "HIGH",
+    "C64": "HIGH",
+    "C65": "MEDIUM",
+    "C94": "MEDIUM",
+    "C95": "MEDIUM"
+  },
+  "B13": {
+    "C01": "MEDIUM",
+    "C04": "HIGH",
+    "C06": "MEDIUM",
+    "C09": "HIGH",
+    "C11": "HIGH",
+    "C12": "HIGH",
+    "C15": "MEDIUM",
+    "C16": "HIGH",
+    "C17": "HIGH",
+    "C18": "HIGH",
+    "C19": "MEDIUM",
+    "C22": "HIGH",
+    "C23": "MEDIUM",
+    "C25": "HIGH",
+    "C26": "MEDIUM",
+    "C28": "MEDIUM",
+    "C34": "HIGH",
+    "C51": "HIGH",
+    "C53": "HIGH",
+    "C64": "HIGH",
+    "C77": "HIGH",
+    "C78": "HIGH",
+    "C79": "HIGH",
+    "C80": "HIGH"
+  },
+  "B14": {
+    "C01": "HIGH",
+    "C03": "MEDIUM",
+    "C04": "HIGH",
+    "C11": "MEDIUM",
+    "C12": "HIGH",
+    "C13": "HIGH",
+    "C14": "HIGH",
+    "C16": "HIGH",
+    "C29": "HIGH",
+    "C30": "HIGH",
+    "C31": "HIGH",
+    "C33": "HIGH",
+    "C34": "HIGH",
+    "C35": "HIGH",
+    "C65": "MEDIUM",
+    "C81": "HIGH",
+    "C82": "HIGH",
+    "C83": "MEDIUM",
+    "C84": "HIGH",
+    "C95": "HIGH"
+  },
+  "B15": {
+    "C01": "MEDIUM",
+    "C03": "HIGH",
+    "C04": "MEDIUM",
+    "C05": "MEDIUM",
+    "C06": "MEDIUM",
+    "C08": "MEDIUM",
+    "C12": "MEDIUM",
+    "C18": "MEDIUM",
+    "C33": "MEDIUM",
+    "C40": "MEDIUM",
+    "C41": "MEDIUM",
+    "C52": "MEDIUM",
+    "C54": "MEDIUM",
+    "C55": "MEDIUM",
+    "C71": "MEDIUM",
+    "C85": "HIGH",
+    "C86": "HIGH",
+    "C87": "HIGH",
+    "C88": "HIGH"
+  },
+  "B16": {
+    "C01": "HIGH",
+    "C02": "HIGH",
+    "C03": "HIGH",
+    "C05": "HIGH",
+    "C06": "MEDIUM",
+    "C07": "HIGH",
+    "C08": "HIGH",
+    "C24": "MEDIUM",
+    "C42": "HIGH",
+    "C50": "HIGH",
+    "C65": "HIGH",
+    "C73": "MEDIUM",
+    "C89": "HIGH",
+    "C90": "HIGH",
+    "C91": "HIGH",
+    "C92": "HIGH",
+    "C93": "HIGH",
+    "C95": "MEDIUM"
+  },
+  "B11": {
+    "C02": "MEDIUM",
+    "C03": "HIGH",
+    "C05": "MEDIUM",
+    "C06": "MEDIUM",
+    "C07": "HIGH",
+    "C08": "HIGH",
+    "C10": "MEDIUM",
+    "C28": "HIGH",
+    "C39": "HIGH",
+    "C52": "MEDIUM",
+    "C55": "HIGH",
+    "C58": "HIGH",
+    "C60": "MEDIUM",
+    "C62": "HIGH",
+    "C66": "HIGH",
+    "C67": "HIGH",
+    "C68": "HIGH",
+    "C69": "HIGH",
+    "C70": "MEDIUM",
+    "C72": "HIGH",
+    "C76": "MEDIUM"
+  },
+  "B04": {
+    "C03": "HIGH",
+    "C29": "HIGH",
+    "C30": "HIGH",
+    "C31": "HIGH",
+    "C32": "HIGH",
+    "C33": "HIGH",
+    "C35": "HIGH",
+    "C84": "MEDIUM",
+    "C95": "MEDIUM"
+  },
+  "B05": {
+    "C03": "HIGH",
+    "C10": "MEDIUM",
+    "C29": "HIGH",
+    "C31": "HIGH",
+    "C33": "HIGH",
+    "C34": "HIGH",
+    "C35": "HIGH",
+    "C36": "HIGH",
+    "C37": "HIGH",
+    "C38": "HIGH",
+    "C73": "MEDIUM",
+    "C76": "MEDIUM",
+    "C80": "MEDIUM"
+  },
+  "B12": {
+    "C03": "HIGH",
+    "C06": "MEDIUM",
+    "C07": "HIGH",
+    "C22": "MEDIUM",
+    "C26": "MEDIUM",
+    "C28": "HIGH",
+    "C35": "HIGH",
+    "C42": "HIGH",
+    "C56": "MEDIUM",
+    "C59": "MEDIUM",
+    "C61": "MEDIUM",
+    "C62": "HIGH",
+    "C67": "MEDIUM",
+    "C71": "HIGH",
+    "C72": "HIGH",
+    "C73": "HIGH",
+    "C74": "HIGH",
+    "C75": "HIGH",
+    "C76": "HIGH",
+    "C94": "HIGH"
+  }
+};
+
+const BUCKET_NAMES = {
+  "B01": "FMCG Territory & Distribution Sales",
+  "B02": "Consumer Durables (FMCD) Field Sales & Ops",
+  "B03": "B2B Industrial, Specs & Projects Sales",
+  "B09": "SaaS / Tech B2B Sales & Business Development",
+  "B10": "EdTech Sales, BD & Counselling",
+  "B15": "Real Estate Sales, Advisory & Transactions",
+  "B04": "Retail Banking, Branch & Relationship Banking",
+  "B05": "Wealth, Insurance & Financial Products RM",
+  "B06": "Finance, Tax, Audit & Compliance Advisory",
+  "B07": "Strategy, Management & Business Consulting",
+  "B08": "IT Consulting, BPM & Technology Services",
+  "B12": "Operations, Supply Chain & Logistics",
+  "B16": "General Management Trainee \u2013 Mfg & Conglomerates",
+  "B13": "Brand, Digital & Growth Marketing",
+  "B11": "HR, Talent Acquisition & People Operations",
+  "B14": "Market Research, Analytics & Insights"
+};
+
+const BUCKET_AIRTABLE_IDS = {
+  "B01": "recTaI2uTRhFQ5Zwz",
+  "B02": "rec9HqRh6RSM3O1mq",
+  "B03": "recyCYXQXlZKuHoiL",
+  "B09": "recE7YAlLrqUsgy9H",
+  "B10": "recDPLEyFijya9NuG",
+  "B15": "recxLyRffNdbn9wHv",
+  "B04": "rec2NvWufP40WpVbn",
+  "B05": "reckB9NafPGLuF1qR",
+  "B06": "recC37WU7DirfCKze",
+  "B07": "rec5LPZI52adL50H3",
+  "B08": "recG8zJe1PLKlUcOH",
+  "B12": "recd2Qwg6rmBpaUj4",
+  "B16": "recsAcun7KsGQ5Hsf",
+  "B13": "recrnL8slTnSIbhwa",
+  "B11": "recjJTXonxjCYak4v",
+  "B14": "recVvugwir0Rjj63y"
+};
+
+const INFERENCE_RULES = [
+  {
+    "target": "C41",
+    "sources": [
+      {
+        "source": "C01",
+        "weight": 0.6
+      },
+      {
+        "source": "C08",
+        "weight": 0.4
+      }
+    ],
+    "applied_to": [
+      "B06",
+      "B10",
+      "B15"
+    ]
+  },
+  {
+    "target": "C27",
+    "sources": [
+      {
+        "source": "C23",
+        "weight": 0.5
+      },
+      {
+        "source": "C26",
+        "weight": 0.5
+      }
+    ],
+    "applied_to": [
+      "B03"
+    ]
+  },
+  {
+    "target": "C32",
+    "sources": [
+      {
+        "source": "C31",
+        "weight": 0.6
+      },
+      {
+        "source": "C40",
+        "weight": 0.4
+      }
+    ],
+    "applied_to": [
+      "B04",
+      "B06"
+    ]
+  },
+  {
+    "target": "C38",
+    "sources": [
+      {
+        "source": "C34",
+        "weight": 0.5
+      },
+      {
+        "source": "C01",
+        "weight": 0.5
+      }
+    ],
+    "applied_to": [
+      "B05",
+      "B10"
+    ]
+  },
+  {
+    "target": "C45",
+    "sources": [
+      {
+        "source": "C08",
+        "weight": 0.4
+      },
+      {
+        "source": "C43",
+        "weight": 0.3
+      },
+      {
+        "source": "C47",
+        "weight": 0.3
+      }
+    ],
+    "applied_to": [
+      "B07"
+    ]
+  },
+  {
+    "target": "C54",
+    "sources": [
+      {
+        "source": "C51",
+        "weight": 0.6
+      },
+      {
+        "source": "C08",
+        "weight": 0.4
+      }
+    ],
+    "applied_to": [
+      "B08",
+      "B15"
+    ]
+  },
+  {
+    "target": "C61",
+    "sources": [
+      {
+        "source": "C25",
+        "weight": 0.5
+      },
+      {
+        "source": "C03",
+        "weight": 0.5
+      }
+    ],
+    "applied_to": [
+      "B03",
+      "B09",
+      "B12"
+    ]
+  },
+  {
+    "target": "C70",
+    "sources": [
+      {
+        "source": "C52",
+        "weight": 0.5
+      },
+      {
+        "source": "C67",
+        "weight": 0.5
+      }
+    ],
+    "applied_to": [
+      "B11"
+    ]
+  },
+  {
+    "target": "C74",
+    "sources": [
+      {
+        "source": "C71",
+        "weight": 0.6
+      },
+      {
+        "source": "C62",
+        "weight": 0.4
+      }
+    ],
+    "applied_to": [
+      "B12"
+    ]
+  },
+  {
+    "target": "C76",
+    "sources": [
+      {
+        "source": "C73",
+        "weight": 0.6
+      },
+      {
+        "source": "C28",
+        "weight": 0.4
+      }
+    ],
+    "applied_to": [
+      "B05",
+      "B11",
+      "B12"
+    ]
+  },
+  {
+    "target": "C79",
+    "sources": [
+      {
+        "source": "C51",
+        "weight": 0.8
+      }
+    ],
+    "applied_to": [
+      "B08",
+      "B13"
+    ]
+  },
+  {
+    "target": "C80",
+    "sources": [
+      {
+        "source": "C18",
+        "weight": 0.5
+      },
+      {
+        "source": "C34",
+        "weight": 0.5
+      }
+    ],
+    "applied_to": [
+      "B02",
+      "B05",
+      "B13"
+    ]
+  },
+  {
+    "target": "C83",
+    "sources": [
+      {
+        "source": "C30",
+        "weight": 0.4
+      },
+      {
+        "source": "C82",
+        "weight": 0.6
+      }
+    ],
+    "applied_to": [
+      "B14"
+    ]
+  },
+  {
+    "target": "C84",
+    "sources": [
+      {
+        "source": "C30",
+        "weight": 0.7
+      },
+      {
+        "source": "C95",
+        "weight": 0.3
+      }
+    ],
+    "applied_to": [
+      "B04",
+      "B14"
+    ]
+  },
+  {
+    "target": "C88",
+    "sources": [
+      {
+        "source": "C08",
+        "weight": 0.5
+      },
+      {
+        "source": "C52",
+        "weight": 0.5
+      }
+    ],
+    "applied_to": [
+      "B15"
+    ]
+  },
+  {
+    "target": "C91",
+    "sources": [
+      {
+        "source": "C02",
+        "weight": 0.4
+      },
+      {
+        "source": "C89",
+        "weight": 0.6
+      }
+    ],
+    "applied_to": [
+      "B16"
+    ]
+  },
+  {
+    "target": "C20",
+    "sources": [
+      {
+        "source": "C19",
+        "weight": 0.6
+      },
+      {
+        "source": "C23",
+        "weight": 0.4
+      }
+    ],
+    "applied_to": [
+      "B02",
+      "B03"
+    ]
+  }
+];
+
+const CLUSTER_MAP = {
+  "CL01": "Communication Excellence",
+  "CL02": "Analytical & Structured Thinking",
+  "CL03": "Leadership & Influence",
+  "CL04": "Numerical & Financial Acumen",
+  "CL05": "Digital & Technology Fluency",
+  "CL06": "Data & Insight Generation",
+  "CL07": "Consumer & Market Orientation",
+  "CL08": "Sales & Revenue Generation",
+  "CL09": "Digital Marketing & Growth",
+  "CL10": "HR & People Systems",
+  "CL11": "Operations & Supply Chain",
+  "CL12": "Finance & Investment",
+  "CL13": "Strategy & Business Design",
+  "CL14": "Product & Tech Acumen",
+  "CL15": "Social Impact & Policy",
+  "CL16": "Healthcare Domain",
+  "CL17": "E-Commerce & Retail Domain",
+  "CL18": "BFSI Domain",
+  "CL19": "Entrepreneurial & Execution Orientation",
+  "CL20": "Ethics, Governance & Values"
+};
+
+const PRIORITY_WEIGHTS = { "HIGH": 1.0, "MEDIUM": 0.6, "LOW": 0.3 };
+
+// ============================================================
+// STATE (all in JS variables — no localStorage/sessionStorage)
+// ============================================================
+let currentIndex = 0;
+let responses = new Array(QUESTIONS.length).fill(null);
+let testStartTime = null;
+let isTestCompleted = false;
+let animDirection = 'right';
+
+// ============================================================
+// SCREEN MANAGEMENT
+// ============================================================
+function showScreen(screenId) {
+  document.querySelectorAll('.screen').forEach(s => s.classList.remove('active'));
+  document.getElementById(screenId).classList.add('active');
+}
+
+function startTest() {
+  testStartTime = Date.now();
+  showScreen('screen-questions');
+  renderQuestion();
+}
+
+// ============================================================
+// QUESTION RENDERING
+// ============================================================
+function renderQuestion() {
+  const q = QUESTIONS[currentIndex];
+  const pct = Math.round(((currentIndex) / QUESTIONS.length) * 100);
+
+  // Update progress
+  document.getElementById('progress-label').textContent = `Question ${currentIndex + 1} of ${QUESTIONS.length}`;
+  document.getElementById('progress-pct').textContent = `${pct}%`;
+  document.getElementById('progress-fill').style.width = `${pct}%`;
+
+  // Back button visibility
+  document.getElementById('btn-back').style.visibility = currentIndex === 0 ? 'hidden' : 'visible';
+
+  // Build question content
+  const content = document.getElementById('question-content');
+  
+  // Section badge
+  let sectionLabel = '';
+  if (q.section === 'interest') {
+    sectionLabel = 'Career Interests';
+  } else if (q.cluster && CLUSTER_MAP[q.cluster]) {
+    sectionLabel = CLUSTER_MAP[q.cluster];
+  } else {
+    sectionLabel = 'Competency Assessment';
+  }
+
+  let html = `<div class="section-badge">${sectionLabel}</div>`;
+  html += `<div class="question-text">${q.question}</div>`;
+
+  // Build options based on format
+  if (q.format === 'likert_5') {
+    html += '<div class="options-group likert-options">';
+    const labels = q.scale_labels;
+    for (let i = 0; i < labels.length; i++) {
+      const value = i + 1; // 1-5
+      const sel = responses[currentIndex] === value ? 'selected' : '';
+      html += `
+        <button class="option-btn ${sel}" onclick="selectOption(${value})">
+          <div class="option-radio"></div>
+          <span class="option-label">${labels[i]}</span>
+        </button>`;
+    }
+    html += '</div>';
+  } else if (q.format === 'yes_partial_no') {
+    html += '<div class="options-group">';
+    const labels = q.scale_labels;
+    const values = [5, 3, 1]; // Yes=5, Partial=3, No=1
+    for (let i = 0; i < labels.length; i++) {
+      const sel = responses[currentIndex] === values[i] ? 'selected' : '';
+      html += `
+        <button class="option-btn ${sel}" onclick="selectOption(${values[i]})">
+          <div class="option-radio"></div>
+          <span class="option-label">${labels[i]}</span>
+        </button>`;
+    }
+    html += '</div>';
+  } else if (q.format === 'single_choice') {
+    html += '<div class="options-group">';
+    const opts = q.options;
+    for (let i = 0; i < opts.length; i++) {
+      const letter = String.fromCharCode(65 + i); // A, B, C, D
+      const sel = responses[currentIndex] === letter ? 'selected' : '';
+      html += `
+        <button class="option-btn ${sel}" onclick="selectOption('${letter}')">
+          <div class="option-radio"></div>
+          <span class="option-label">${opts[i]}</span>
+        </button>`;
+    }
+    html += '</div>';
+  }
+
+  content.innerHTML = html;
+  content.style.animation = 'none';
+  content.offsetHeight; // trigger reflow
+  content.style.animation = animDirection === 'right' ? 'slideInRight 0.25s ease' : 'slideInLeft 0.25s ease';
+
+  // Update next button state
+  updateNextButton();
+}
+
+function selectOption(value) {
+  responses[currentIndex] = value;
+  renderQuestion();
+}
+
+function updateNextButton() {
+  const btn = document.getElementById('btn-next');
+  btn.disabled = responses[currentIndex] === null;
+  
+  // Change button text on last question
+  if (currentIndex === QUESTIONS.length - 1) {
+    btn.innerHTML = `Complete <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>`;
+  } else {
+    btn.innerHTML = `Next <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>`;
+  }
+}
+
+function goNext() {
+  if (responses[currentIndex] === null) return;
+  
+  if (currentIndex === QUESTIONS.length - 1) {
+    completeTest();
+    return;
+  }
+  
+  animDirection = 'right';
+  currentIndex++;
+  renderQuestion();
+}
+
+function goBack() {
+  if (currentIndex === 0 || isTestCompleted) return;
+  animDirection = 'left';
+  currentIndex--;
+  renderQuestion();
+}
+
+// ============================================================
+// SCORING ENGINE
+// ============================================================
+function computeScores() {
+  // ---- Step 1: Compute competency scores from direct measurements ----
+  
+  // Build a map: competencyId -> [{ questionIndex, loading }]
+  const compQuestionMap = {};
+  
+  QUESTIONS.forEach((q, idx) => {
+    if (q.format === 'single_choice') return; // Interest questions handled separately
+    
+    const response = responses[idx];
+    if (response === null) return;
+    
+    // Primary competency - loading 1.0
+    if (q.primary_competency) {
+      // Find the competency ID from airtable_id
+      const comp = COMPETENCIES.find(c => c.airtable_id === q.primary_competency.airtable_id);
+      if (comp) {
+        if (!compQuestionMap[comp.id]) compQuestionMap[comp.id] = [];
+        compQuestionMap[comp.id].push({ score: response, loading: 1.0 });
+      }
+    }
+    
+    // Secondary competency - loading 0.5
+    if (q.secondary_competency) {
+      const comp = COMPETENCIES.find(c => c.airtable_id === q.secondary_competency.airtable_id);
+      if (comp) {
+        if (!compQuestionMap[comp.id]) compQuestionMap[comp.id] = [];
+        compQuestionMap[comp.id].push({ score: response, loading: 0.5 });
+      }
+    }
+  });
+  
+  // Compute weighted average for each measured competency
+  const competencyScores = {};
+  
+  COMPETENCIES.forEach(comp => {
+    const entries = compQuestionMap[comp.id];
+    if (entries && entries.length > 0) {
+      const totalWeighted = entries.reduce((sum, e) => sum + e.score * e.loading, 0);
+      const totalWeight = entries.reduce((sum, e) => sum + e.loading, 0);
+      competencyScores[comp.id] = totalWeighted / totalWeight;
+    }
+  });
+  
+  // ---- Step 2: Infer unmeasured competencies ----
+  INFERENCE_RULES.forEach(rule => {
+    let score = 0;
+    let totalWeight = 0;
+    let allAvailable = true;
+    
+    rule.sources.forEach(src => {
+      if (competencyScores[src.source] !== undefined) {
+        score += competencyScores[src.source] * src.weight;
+        totalWeight += src.weight;
+      } else {
+        allAvailable = false;
+      }
+    });
+    
+    if (totalWeight > 0) {
+      // Use actual weights from formula (they should sum to ~1.0)
+      competencyScores[rule.target] = score;
+    }
+  });
+  
+  // ---- Step 3: Compute bucket scores ----
+  const bucketScores = {};
+  
+  // First, compute interest boosts from interest questions
+  const interestBoosts = {};
+  Object.keys(BUCKET_NAMES).forEach(bid => { interestBoosts[bid] = 0; });
+  
+  QUESTIONS.forEach((q, idx) => {
+    if (q.format !== 'single_choice') return;
+    const response = responses[idx];
+    if (response === null) return;
+    
+    // The response is a letter (A, B, C, D)
+    const weights = q.bucket_weights[response];
+    if (weights) {
+      Object.entries(weights).forEach(([bid, w]) => {
+        // Each selected interest option adds its weight * 0.5 (as per scoring note)
+        interestBoosts[bid] = (interestBoosts[bid] || 0) + (w * 0.5);
+      });
+    }
+  });
+  
+  // Cap interest boosts at 0.5 per bucket
+  Object.keys(interestBoosts).forEach(bid => {
+    interestBoosts[bid] = Math.min(interestBoosts[bid], 0.5);
+  });
+  
+  // Now compute WCS for each bucket
+  Object.keys(BUCKET_NAMES).forEach(bid => {
+    const weightEntries = WEIGHT_MATRIX[bid];
+    if (!weightEntries) {
+      bucketScores[bid] = { wcs: 0, interest_boost: 0, fit_pct: 0 };
+      return;
+    }
+    
+    let totalWeighted = 0;
+    let totalWeight = 0;
+    
+    Object.entries(weightEntries).forEach(([cid, priority]) => {
+      const w = PRIORITY_WEIGHTS[priority] || 0.3;
+      const cScore = competencyScores[cid];
+      if (cScore !== undefined) {
+        totalWeighted += cScore * w;
+        totalWeight += w;
+      }
+    });
+    
+    const wcs = totalWeight > 0 ? totalWeighted / totalWeight : 0;
+    const ib = interestBoosts[bid] || 0;
+    
+    // Career Fit %: ((WCS + interest_boost) / 5.0) × 100, capped at 100
+    const fitPct = Math.min(((wcs + ib) / 5.0) * 100, 100);
+    
+    bucketScores[bid] = {
+      wcs: Math.round(wcs * 100) / 100,
+      interest_boost: Math.round(ib * 100) / 100,
+      fit_pct: Math.round(fitPct * 10) / 10,
+      name: BUCKET_NAMES[bid],
+      airtable_id: BUCKET_AIRTABLE_IDS[bid]
+    };
+  });
+  
+  return { competencyScores, bucketScores, interestBoosts };
+}
+
+// ============================================================
+// TEST COMPLETION
+// ============================================================
+function completeTest() {
+  isTestCompleted = true;
+  const endTime = Date.now();
+  const timeTakenSeconds = Math.round((endTime - testStartTime) / 1000);
+  const timeTakenMinutes = Math.round(timeTakenSeconds / 60);
+  
+  // Compute scores
+  const { competencyScores, bucketScores } = computeScores();
+  
+  // Build response payload
+  const responsePayload = QUESTIONS.map((q, idx) => {
+    const entry = {
+      question_id: q.id,
+      response: responses[idx]
+    };
+    
+    if (q.primary_competency) {
+      const comp = COMPETENCIES.find(c => c.airtable_id === q.primary_competency.airtable_id);
+      entry.competency_ids = comp ? [comp.id] : [];
+      entry.competency_airtable_ids = [q.primary_competency.airtable_id];
+    }
+    
+    if (q.secondary_competency) {
+      const comp = COMPETENCIES.find(c => c.airtable_id === q.secondary_competency.airtable_id);
+      if (comp) {
+        entry.competency_ids = (entry.competency_ids || []).concat([comp.id]);
+        entry.competency_airtable_ids = (entry.competency_airtable_ids || []).concat([q.secondary_competency.airtable_id]);
+      }
+    }
+    
+    return entry;
+  });
+  
+  // Build competency scores payload
+  const compScoresPayload = {};
+  Object.entries(competencyScores).forEach(([cid, score]) => {
+    const comp = COMPETENCIES.find(c => c.id === cid);
+    compScoresPayload[cid] = {
+      score: Math.round(score * 100) / 100,
+      airtable_id: comp ? comp.airtable_id : '',
+      name: comp ? comp.name : cid
+    };
+  });
+  
+  // Build final result
+  const result = {
+    student_id: '',
+    responses: responsePayload,
+    competency_scores: compScoresPayload,
+    bucket_scores: bucketScores,
+    completed_at: new Date().toISOString(),
+    time_taken_seconds: timeTakenSeconds
+  };
+  
+  // Store globally
+  window.__CAREER_DISCOVERY_RESULT__ = result;
+  console.log('Career Discovery Test — Results:', JSON.stringify(result, null, 2));
+  
+  // Show completion screen
+  showScreen('screen-complete');
+  document.getElementById('stat-questions').textContent = QUESTIONS.length;
+  document.getElementById('stat-time').textContent = timeTakenMinutes < 1 ? '<1' : timeTakenMinutes;
+}
+
+// ============================================================
+// KEYBOARD NAVIGATION
+// ============================================================
+document.addEventListener('keydown', (e) => {
+  if (isTestCompleted) return;
+  
+  const screen = document.getElementById('screen-questions');
+  if (!screen.classList.contains('active')) return;
+  
+  if (e.key === 'ArrowRight' || e.key === 'Enter') {
+    if (!document.getElementById('btn-next').disabled) {
+      goNext();
+    }
+  } else if (e.key === 'ArrowLeft') {
+    goBack();
+  } else if (e.key >= '1' && e.key <= '5') {
+    const q = QUESTIONS[currentIndex];
+    if (q.format === 'likert_5') {
+      selectOption(parseInt(e.key));
+    }
+  }
+});
+
+// ============================================================
+// HASH STATE FOR BASIC PERSISTENCE (no localStorage)
+// ============================================================
+function saveToHash() {
+  try {
+    const state = {
+      i: currentIndex,
+      r: responses,
+      t: testStartTime
+    };
+    const encoded = btoa(JSON.stringify(state));
+    if (encoded.length < 4000) { // URL length safety
+      window.location.hash = encoded;
+    }
+  } catch(e) {
+    // Silently fail
+  }
+}
+
+function loadFromHash() {
+  try {
+    const hash = window.location.hash.slice(1);
+    if (!hash) return false;
+    const state = JSON.parse(atob(hash));
+    if (state && state.r && state.r.length === QUESTIONS.length) {
+      currentIndex = state.i || 0;
+      responses = state.r;
+      testStartTime = state.t || Date.now();
+      return true;
+    }
+  } catch(e) {
+    // Invalid hash
+  }
+  return false;
+}
+
+// Save state periodically
+setInterval(() => {
+  if (testStartTime && !isTestCompleted) {
+    saveToHash();
+  }
+}, 5000);
+
+// Try to restore state on load
+if (loadFromHash()) {
+  showScreen('screen-questions');
+  renderQuestion();
+}
+</script>
+</body>
+</html>
